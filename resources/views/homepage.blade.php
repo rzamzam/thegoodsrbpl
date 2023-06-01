@@ -5,13 +5,15 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+
     <title>THEGOODS - Home</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
     <!-- Favicons -->
-    <link href="{{asset('assets(/img/favicon.png')}}" rel="icon">
-    <link href="{{asset('assets(img/apple-touch-icon.png')}}" rel="apple-touch-icon">
+    <link href="{{asset('assets/img/favicon.ico')}}" rel="icon">
+    <link href="{{asset('assets/img/apple-touch-icon.png')}}" rel="apple-touch-icon">
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
@@ -363,7 +365,7 @@
             <div class="container" data-aos="fade-up">
 
                 <div class="section-title">
-                    <h2>Sevices</h2>
+                    <h2>Features</h2>
                     <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
                 </div>
 
@@ -376,7 +378,7 @@
                                 </svg>
                                 <i class="bx bxl-dribbble"></i>
                             </div>
-                            <h4><a href="">Lorem Ipsum</a></h4>
+                            <h4><a href="">Product & Inventory</a></h4>
                             <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
                         </div>
                     </div>
@@ -389,7 +391,7 @@
                                 </svg>
                                 <i class="bx bx-file"></i>
                             </div>
-                            <h4><a href="">Sed Perspiciatis</a></h4>
+                            <h4><a href="">Wallet</a></h4>
                             <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
                         </div>
                     </div>
@@ -402,7 +404,7 @@
                                 </svg>
                                 <i class="bx bx-tachometer"></i>
                             </div>
-                            <h4><a href="">Magni Dolores</a></h4>
+                            <h4><a href="">Sales</a></h4>
                             <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
                         </div>
                     </div>
@@ -415,7 +417,7 @@
                                 </svg>
                                 <i class="bx bx-layer"></i>
                             </div>
-                            <h4><a href="">Nemo Enim</a></h4>
+                            <h4><a href="">Purchases</a></h4>
                             <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
                         </div>
                     </div>
@@ -428,7 +430,7 @@
                                 </svg>
                                 <i class="bx bx-slideshow"></i>
                             </div>
-                            <h4><a href="">Dele Cardo</a></h4>
+                            <h4><a href="">Financial Report</a></h4>
                             <p>Quis consequatur saepe eligendi voluptatem consequatur dolor consequuntur</p>
                         </div>
                     </div>
@@ -441,7 +443,7 @@
                                 </svg>
                                 <i class="bx bx-arch"></i>
                             </div>
-                            <h4><a href="">Divera Don</a></h4>
+                            <h4><a href="">Messenger</a></h4>
                             <p>Modi nostrum vel laborum. Porro fugit error sit minus sapiente sit aspernatur</p>
                         </div>
                     </div>
@@ -852,13 +854,13 @@
                             <div class="address">
                                 <i class="bi bi-geo-alt"></i>
                                 <h4>Location:</h4>
-                                <p>A108 Adam Street, New York, NY 535022</p>
+                                <p>Institut Teknologi Sepuluh Nopember. Kampus ITS Sukolilo, Surabaya 60111.</p>
                             </div>
 
                             <div class="email">
                                 <i class="bi bi-envelope"></i>
                                 <h4>Email:</h4>
-                                <p>info@example.com</p>
+                                <p>thegoods@gmail.com</p>
                             </div>
 
                             <div class="phone">
@@ -913,13 +915,13 @@
                 <div class="row">
 
                     <div class="col-lg-3 col-md-6 footer-contact">
-                        <h3>OnePage</h3>
+                        <h3>THEGOODS</h3>
                         <p>
-                            A108 Adam Street <br>
-                            New York, NY 535022<br>
-                            United States <br><br>
-                            <strong>Phone:</strong> +1 5589 55488 55<br>
-                            <strong>Email:</strong> info@example.com<br>
+                            Institut Teknologi Sepuluh Nopember, Kampus ITS Sukolilo<br>
+                            Surabaya, 60111<br>
+                            Indonesia <br><br>
+                            <strong>Phone:</strong> 0812345678910<br>
+                            <strong>Email:</strong> thegoods@gmail.com<br>
                         </p>
                     </div>
 
@@ -961,14 +963,14 @@
 
             <div class="me-md-auto text-center text-md-start">
                 <div class="copyright">
-                    &copy; Copyright <strong><span>OnePage</span></strong>. All Rights Reserved
+                    &copy; Copyright <strong><span>THEGOODS</span></strong>. All Rights Reserved
                 </div>
                 <div class="credits">
                     <!-- All the links in the footer should remain intact. -->
                     <!-- You can delete the links only if you purchased the pro version. -->
                     <!-- Licensing information: https://bootstrapmade.com/license/ -->
                     <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/onepage-multipurpose-bootstrap-template/ -->
-                    Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+                    Designed by <a href="https://bootstrapmade.com/">THEGOODS</a>
                 </div>
             </div>
             <div class="social-links text-center text-md-right pt-3 pt-md-0">
