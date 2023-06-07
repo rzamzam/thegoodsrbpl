@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Products;
 
 class OwnerController extends Controller
 {
@@ -33,9 +34,11 @@ class OwnerController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show()
     {
-        //
+        $products = Products::all();
+        $sum = Products::sum('stock');
+        return view('owner.owner', compact('products', 'sum'));
     }
 
     /**

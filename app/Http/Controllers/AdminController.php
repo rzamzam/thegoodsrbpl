@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Employee;
+use App\Models\Products;
 
 class AdminController extends Controller
 {
@@ -27,15 +29,27 @@ class AdminController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $insert = Employee::create([
+            'name' => $request->name,
+            'age' => $request->age,
+            'role' => $request->role,
+        ]);
+        return redirect('/admin');
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show()
     {
-        //
+        $employees = Employee::all();
+        return view('admin.admin', compact('employees'));
+    }
+    public function showSupplier()
+    {
+        $products = Products::all();
+        $sum = Products::sum('stock');
+        return view('supplier.supplier', compact('products', 'sum'));
     }
 
     /**
