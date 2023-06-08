@@ -40,7 +40,6 @@ Route::get('/admin', [AdminController::class, 'show']);
 Route::get('/supplier', [AdminController::class, 'showSupplier']);
 Route::get('/owner', [OwnerController::class, 'show']);
 Route::post('/admin/adduser', [AdminController::class, 'store']);
-<<<<<<< Updated upstream
 
 Route::get('/layout', function () {
     return view('layouts.layout');
@@ -61,6 +60,3 @@ Route::get('/invoice', function () {
 Route::get('/history', function () {
     return view('buyer.history');
 });
-=======
-Route::get('/invoice', [PurchaseController::class, 'Invoice']);
->>>>>>> Stashed changes
