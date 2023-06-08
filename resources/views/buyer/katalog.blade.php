@@ -447,7 +447,7 @@
     function updateTotalPrice(){
         let totalHarga = document.getElementById('totalPrice').textContent;
         let harga = totalHarga.split('Rp');
-        let totalprice = parseInt(harga[1]);
+        let totalprice = parseInt(harga[1])*1;
         // document.getElementById('totalprice').textContent = totalprice;
         document.getElementById('totalPriceInt').value = totalprice;
     }

@@ -180,7 +180,7 @@ table{
                                                     <p class="mt-3">Total Price</p>
                                                 </div>
                                                 <div class="total-right w-15 float-left text-bold" align="right">
-                                                    <p class="mt-3">$8000.00</p>
+                                                    <p class="mt-3">Rp{{number_format($purchases->totalprice)}}</p>
                                                 </div>
                                                 <div style="clear: both;"></div>
                                             </div>
