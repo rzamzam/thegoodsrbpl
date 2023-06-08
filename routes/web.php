@@ -54,3 +54,7 @@ Route::get('/pembayaran', function () {
 Route::get('/invoice', function () {
     return view('buyer.invoice');
 });
+
+Route::get('/history', function () {
+    return view('buyer.history');
+});
