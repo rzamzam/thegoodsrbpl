@@ -16,7 +16,7 @@ use App\Http\Controllers\OwnerController;
 */
 
 Route::get('/', function () {
-    return view('login');
+    return view('auth.login');
 });
 
 Route::get('/home', function () {
@@ -38,3 +38,17 @@ Route::get('/admin', [AdminController::class, 'show']);
 Route::get('/supplier', [AdminController::class, 'showSupplier']);
 Route::get('/owner', [OwnerController::class, 'show']);
 Route::post('/admin/adduser', [AdminController::class, 'store']);
+
+Route::get('/layout', function () {
+    return view('layouts.layout');
+});
+
+Route::get('/katalog', function () {
+    return view('buyer.katalog');
+});
+
+Route::get('/pembayaran', function () {
+    return view('buyer.pembayaran');
+});
+
+
