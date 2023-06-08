@@ -12,18 +12,19 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('purchases_store', function (Blueprint $table) {
-            $table->id('purchase_id')->primary();
+            $table->id('purchase_id');
             $table->integer('sepatu')->nullable();
             $table->integer('sandal')->nullable();
-            $table->integer('snack')->nullable();
-            $table->integer('soda_kaleng')->nullable();
+            $table->integer('lays')->nullable();
+            $table->integer('cocacola')->nullable();
             $table->integer('tissue')->nullable();
-            $table->integer('minyak_goreng')->nullable();
+            $table->integer('oil')->nullable();
             $table->integer('gula')->nullable();
             $table->integer('pasta_gigi')->nullable();
+            $table->integer('sabun_piring')->nullable();
             $table->integer('detergen')->nullable();
-            $table->integer('lampu')->nullable();
-            $table->integer('deterjen')->nullable();
+            $table->integer('totalprice')->nullable();
+            $table->foreignUuid('user_id')->constraint();
             $table->timestamps();
         });
         // sepatu, sandal, snack, soda kaleng, tisue, minyak goreng, gula, pasta gigi, sabun cuci piring, deterjen

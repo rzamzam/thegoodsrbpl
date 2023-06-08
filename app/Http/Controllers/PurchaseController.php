@@ -37,18 +37,18 @@ class PurchaseController extends Controller
     public function store(Request $request)
     {
         Purchase::create([
-            'sepatu' => $request->sepatu,
-            'plastic_cup' => $request->jumlah_plasticGlass,
-            'sandal' => $request->sandal,
-            'snack' => $request->snack,
-            'soda_kaleng' => $request->soda_kaleng,
-            'tissue' => $request->tissue,
-            'minyak_goreng' => $request->minyak_goreng,
-            'gula' => $request->gula,
-            'pasta_gigi' => $request->pasta_gigi,
-            'detergen' => $request->detergen,
-            'user_id' => Auth::id(),
-            // 'bpoints' => $request->bPoints,
+            'sepatu' => $request->jumlah_sepatu,
+            'sandal' => $request->jumlah_sandal,
+            'lays' => $request->jumlah_lays,
+            'cocacola' => $request->jumlah_cocacola,
+            'tissue' => $request->jumlah_paseo,
+            'oil' => $request->jumlah_oil,
+            'gula' => $request->jumlah_gulaku,
+            'pasta_gigi' => $request->jumlah_odol,
+            'sabun_piring' => $request->jumlah_mama,
+            'detergen' => $request->jumlah_tide,
+            'user_id' => 1,
+            'totalprice' => $request->totalPriceInt,
         ]);
         return redirect()->back()->with('success');
     }
@@ -56,9 +56,15 @@ class PurchaseController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function history()
     {
-        //
+        $purchases = Purchase::where('user_id', '=', 1)->get();
+        return view('buyer.history', compact('purchases'));
+    }
+    public function viewInvoice($id)
+    {
+        $purchases = Purchase::where('purchase_id', '=', $id)->first();
+        return view('invoice_pdf', compact('purchases'));
     }
 
     /**

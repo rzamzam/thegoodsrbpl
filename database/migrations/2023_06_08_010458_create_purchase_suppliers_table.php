@@ -12,18 +12,18 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('purchase_suppliers', function (Blueprint $table) {
-            $table->id('purchaseSupplier_id')->primary();
+            $table->id('purchaseSupplier_id');
             $table->integer('sepatu')->nullable();
             $table->integer('sandal')->nullable();
-            $table->integer('snack')->nullable();
-            $table->integer('soda_kaleng')->nullable();
+            $table->integer('lays')->nullable();
+            $table->integer('cocacola')->nullable();
             $table->integer('tissue')->nullable();
-            $table->integer('minyak_goreng')->nullable();
+            $table->integer('oil')->nullable();
             $table->integer('gula')->nullable();
             $table->integer('pasta_gigi')->nullable();
+            $table->integer('sabun_piring')->nullable();
             $table->integer('detergen')->nullable();
-            $table->integer('lampu')->nullable();
-            $table->integer('deterjen')->nullable();
+            $table->integer('totalprice')->nullable();
             $table->timestamps();
         });
     }
