@@ -51,4 +51,6 @@ Route::get('/pembayaran', function () {
     return view('buyer.pembayaran');
 });
 
-
+Route::get('/invoice', function () {
+    return view('buyer.invoice');
+});
