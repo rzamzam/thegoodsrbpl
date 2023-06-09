@@ -50,7 +50,7 @@ class PurchaseController extends Controller
             'pasta_gigi' => $request->jumlah_odol,
             'sabun_piring' => $request->jumlah_mama,
             'detergen' => $request->jumlah_tide,
-            'user_id' => 1,
+            'user_id' => Auth::user()->id,
             'totalprice' => $request->totalPriceInt,
         ]);
         return redirect()->back()->with('success');
