@@ -12,7 +12,9 @@ class PurchaseController extends Controller
     /**
      * Display a listing of the resource.
      */
-    
+    public function show(){
+        return view('buyer.katalog');
+    }
     public function Invoice()
     {
         $pdf = PDF::loadView('invoice_pdf');

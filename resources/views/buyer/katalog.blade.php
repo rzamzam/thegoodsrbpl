@@ -2,12 +2,13 @@
 @section('isi')
 
 <div class="container">
-    {{-- @if (Auth::role_id() == 'buyer')
+    {{-- @if(auth()->user()->role_id == 1)
     <form method="POST" action="buyer/purchase">
         @else
         <form method="POST" action="owner/purchase">
-    @endif --}}
-    <form method="POST" action="owner/purchase">
+    @endif
+    <form method="POST" action="owner/purchase"> --}}
+    <form method="POST" action="buyer/purchase">
         @csrf
     <div class="row g-4 row-cols-lg-5 row-cols-2 row-cols-md-3">
         <div class="col">
@@ -310,6 +311,7 @@
             </div>
         </div>
     </div>
+    {{-- @if (auth()->user()->role_id === 1) --}}
     <div class="row mt-5">
         <div class="col-2"></div>
         <div class="col-8">
@@ -343,6 +345,8 @@
         </div>
         <div class="col-2"></div>
     </div>
+    {{-- @endif --}}
+    
     <div class="row text-center mt-5">
         <div class="col-3"></div>
         <div class="col-6">

@@ -13,19 +13,16 @@ class RegisterController extends Controller
     /**
      * Display a listing of the resource.
      */
+    public function show(){
+        return view('register');
+    }
     public function store(Request $request){
-        $validatedData=  $request->validate([
-             'name' => 'required|max:25',
-             'username' =>'required',
-             'email' => 'required|email:dns|unique:users',
-             'password' => 'required|min:8|max:20'
-         ]);
-
-         $validatedData['password'] = Hash::make($validatedData['password']);
-
-         User::create($validatedData);
-
-         $request->session()->flash('success', 'Registration was successful! Please Login to your account');
+        $user = User::create([
+            'name' => $request->name,
+            'username' => $request->username,
+            'email' => $request->email,
+            'password' => Hash::make($request->password),
+        ]);
          return redirect('/login');
         }
 }

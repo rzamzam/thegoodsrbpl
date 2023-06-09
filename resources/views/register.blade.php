@@ -31,48 +31,48 @@
     <div class="text-center mt-5">
         <img src="../assets/img/apple-touch-icon.png" alt="" style="width:30vh">
     </div>
-    <form>
         <div class="row mt-2">
             <div class="col-4"></div>
             <div class="col-4">
+                <form action="/register" method="POST">
+                    @csrf
                 <!-- Nama input -->
                 <div class="form-outline mb-4">
-                    <label class="form-label" for="form2Example2">Nama Lengkap</label>
-                    <input type="text" id="form2Example2" class="form-control" />
+                    <label class="form-label" for="form2Example2">Full Name</label>
+                    <input name="name" type="text" id="form2Example2" class="form-control" />
                 </div>
 
                 <!-- Username input -->
                 <div class="form-outline mb-4">
                     <label class="form-label" for="form2Example2">Username</label>
-                    <input type="text" id="form2Example2" class="form-control" />
+                    <input name="username" type="text" id="form2Example2" class="form-control" />
                 </div>
 
                 <!-- Email input -->
                 <div class="form-outline mb-4">
                     <label class="form-label" for="form2Example1">Email address</label>
-                    <input type="email" id="form2Example1" class="form-control" />
+                    <input name="email" type="email" id="form2Example1" class="form-control" />
                 </div>
 
                 <!-- Password input -->
                 <div class="form-outline mb-4">
                     <label class="form-label" for="form2Example2">Password</label>
-                    <input type="password" id="form2Example2" class="form-control" />
+                    <input name="password" type="password" id="form2Example2" class="form-control" />
                 </div>
 
                 <!-- Submit button -->
                 <div class="text-center">
-                    <button type="button" class="btn btn-primary btn-block mb-4 w-50">Register</button>
+                    <button type="submit" class="btn btn-primary btn-block mb-4 w-50">Register</button>
                 </div>
+            </form>
 
                 <!-- Login buttons -->
                 <div class="text-center">
-                    <p>Already have an account? <a href="#!">Login Here</a></p>
+                    <p>Already have an account? <a href="/login">Login Here</a></p>
                 </div>
             </div>
             <div class="col-4"></div>
         </div>
-
-      </form>
 </body>
 
 </html>

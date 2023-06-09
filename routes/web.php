@@ -6,6 +6,8 @@ use App\Http\Controllers\OwnerController;
 use App\Http\Controllers\SupplierController;
 use App\Http\Controllers\InvoiceController;
 use App\Http\Controllers\PurchaseController;
+use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\LoginController;
 use App\Http\Controllers\PurchaseSupplierController;
 
 /*
@@ -19,14 +21,6 @@ use App\Http\Controllers\PurchaseSupplierController;
 |
 */
 
-Route::get('/', function () {
-    return view('login');
-});
-
-Route::get('/register', function () {
-    return view('register');
-});
-
 Route::get('/home', function () {
     return view('homepage');
 });
@@ -36,13 +30,11 @@ Route::get('/admin/adduser', function () {
     return view('admin.adduser');
 });
 
-Route::get('/register', function () {
-    return view('register');
-});
-Route::get('/admin', function () {
-    return view('admin.admin');
-});
-Route::get('/admin', [AdminController::class, 'show']);
+Route::get('/admin', [AdminController::class, 'showAdmin']);
+Route::get('/register', [RegisterController::class, 'show']);
+Route::post('/register', [RegisterController::class, 'store']);
+Route::get('/login', [LoginController::class, 'show']);
+Route::post('/login', [LoginController::class, 'authenticate']);
 Route::get('/supplier', [SupplierController::class, 'show']);
 Route::get('/owner', [OwnerController::class, 'show']);
 Route::get('/history', [PurchaseController::class, 'history']);
@@ -54,11 +46,7 @@ Route::post('/owner/purchase', [PurchaseSupplierController::class, 'store']);
 Route::get('/layout', function () {
     return view('layouts.layout');
 });
-
-Route::get('/katalog', function () {
-    return view('buyer.katalog');
-});
-
+Route::get('/buyer/katalog', [PurchaseController::class, 'show']);
 Route::get('/pembayaran', function () {
     return view('buyer.pembayaran');
 });

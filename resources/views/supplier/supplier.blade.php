@@ -158,7 +158,7 @@
                 <!-- Small boxes (Stat box) -->
                 <div class="card">
                     <div class="card-header border-0">
-                      <h3 class="card-title">Stock in Warehouse : {{400 + $buysepatu + $buysandal + $buylays + $buycocacola
+                      <h3 class="card-title">Stock in Warehouse : {{4000 + $buysepatu + $buysandal + $buylays + $buycocacola
                       + $buytissue + $buyoil + $buypasta_gigi + $buysabun_piring + $buydeterjen}}</h3>
                     </div>
                     <div class="card-body table-responsive p-0">

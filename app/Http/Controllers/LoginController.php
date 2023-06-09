@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
 {
@@ -11,23 +12,28 @@ class LoginController extends Controller
     }
     public function authenticate(Request $request){
         $credentials =  $request -> validate([
-            'email' => 'required|email:dns',
+            'email' => 'required',
             'password' => 'required'
         ]);
         if(Auth::attempt($credentials)){
             $request->session()->regenerate();
-            if(Auth::user()->role === 'buyer'){
-                return redirect('/katalog');
-            } elseif(Auth::user()->role === 'supplier'){
+            if(Auth::user()->role_id === 1){
+                return redirect('/buyer/katalog');
+            } elseif(Auth::user()->role_id === 2){
                 return redirect('/supplier');
-            } elseif(Auth::user()->role === 'admin'){
+            } elseif(Auth::user()->role_id === 3){
                 return redirect('/admin');
-            } elseif(Auth::user()->role === 'store'){
+            } elseif(Auth::user()->role_id === 4){
                 return redirect('/store');
             }
-            return redirect('/');
         }
-        return back()->with('loginError', 'Login Failed');
+        // if(Auth::attempt($credentials)){
+        //     $request->session()->regenerate();
+        //     // dd($credentials);
+        //     // return redirect()->route('login');
+        //     return redirect('/katalog');
+        // }
+        return redirect('/register');
     }
     public function logout(Request $request)
     {

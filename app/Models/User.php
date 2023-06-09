@@ -21,6 +21,7 @@ class User extends Authenticatable
      */
     protected $fillable = [
         'name',
+        'username',
         'email',
         'password',
     ];
@@ -46,5 +47,11 @@ class User extends Authenticatable
     ];
     public function purchase(){
         return $this->hasMany(Purchase::class, 'user_id', 'user_id');
+    }
+    protected function type(): Attribute
+    {
+        return new Attribute(
+            get: fn ($value) =>  ["user", "admin", "manager"][$value],
+        );
     }
 }

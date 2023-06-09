@@ -11,11 +11,11 @@ class AdminController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function showAdmin()
     {
-        //
+        $employees = Employee::all();
+        return view('admin.admin', compact('employees'));
     }
-
     /**
      * Show the form for creating a new resource.
      */
@@ -40,17 +40,7 @@ class AdminController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show()
-    {
-        $employees = Employee::all();
-        return view('admin.admin', compact('employees'));
-    }
-    public function showSupplier()
-    {
-        $products = Products::all();
-        $sum = Products::sum('stock');
-        return view('supplier.supplier', compact('products', 'sum'));
-    }
+    
 
     /**
      * Show the form for editing the specified resource.
