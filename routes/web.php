@@ -60,3 +60,6 @@ Route::post('/logout', [LoginController::class, 'logout']); //logout
 Route::get('/homepage', function () {
     return view('home');
 });
+Route::get('/katalog', function () {
+    return view('buyer.katalog');
+});

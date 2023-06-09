@@ -57,7 +57,7 @@
                 <ul>
                     <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
                     <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
-                    @if (Illuminate\Support\Facades\Auth::check())
+                    @if(Auth::check())
                     <form action="/logout" method="POST">
                         @csrf
                         <li><a class="getstarted scrollto" href="/logout">Logout</a></li>

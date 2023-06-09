@@ -8,7 +8,7 @@
         <form method="POST" action="owner/purchase">
     @endif
     <form method="POST" action="owner/purchase"> --}}
-    <form method="POST" action="buyer/purchase">
+    <form method="POST" action="/buyer/purchase">
         @csrf
     <div class="row g-4 row-cols-lg-5 row-cols-2 row-cols-md-3">
         <div class="col">
@@ -321,7 +321,6 @@
                         <b>Alamat Pengiriman</b>
                     </h1>
                     <div class="mt-1 mb-2">
-                        <form>
                             <div class="form-group">
                                 <label for="namaPenerima">Nama Penerima</label>
                                 <input type="text" class="form-control mt-2" id="namaPenerima" placeholder="Nama Lengkap">
@@ -338,7 +337,6 @@
                                 <label for="note">Note</label>
                                 <input type="text" class="form-control mt-2" id="note" placeholder="Detail Lainnya">
                             </div>
-                        </form>
                     </div>
                 </div>
             </div>
