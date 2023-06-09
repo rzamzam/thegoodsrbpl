@@ -57,16 +57,16 @@
                 <ul>
                     <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
                     <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
-                    @if(Auth::check())
+                    @auth
                     <form action="/logout" method="POST">
                         @csrf
                         <li><a class="getstarted scrollto" href="/logout">Logout</a></li>
                     </form>
-                    @else
+                    @endauth
                         <li><a class="getstarted scrollto" href="/login">Login</a></li>
-                        <li><a class="getstarted scrollto" href="/register">Register</a></li> 
-                    @endif
-                        
+                        <li><a class="getstarted scrollto" href="/register">Register</a></li>
+
+
                 </ul>
                 <i class="bi bi-list mobile-nav-toggle"></i>
             </nav><!-- .navbar -->
