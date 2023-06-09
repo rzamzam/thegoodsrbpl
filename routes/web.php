@@ -20,7 +20,11 @@ use App\Http\Controllers\PurchaseSupplierController;
 */
 
 Route::get('/', function () {
-    return view('auth.login');
+    return view('login');
+});
+
+Route::get('/register', function () {
+    return view('register');
 });
 
 Route::get('/home', function () {

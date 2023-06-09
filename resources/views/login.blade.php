@@ -2,19 +2,69 @@
 <html>
 
 <head>
-    <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css?family=Pontano+Sans&display=swap" rel="stylesheet" />
-    <link href="{{asset('loginfix/css/main.css')}}" rel="stylesheet" />
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <!-- Favicons -->
+    <link href="{{asset('assets/img/favicon.ico')}}" rel="icon">
+    <link href="{{asset('assets/img/apple-touch-icon.png')}}" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="{{asset('assets/vendor/aos/aos.css')}}" rel="stylesheet">
+    <link href="{{asset('assets/vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+    <link href="{{asset('assets/vendor/bootstrap-icons/bootstrap-icons.css')}}" rel="stylesheet">
+    <link href="{{asset('assets/vendor/boxicons/css/boxicons.min.css')}}" rel="stylesheet">
+    <link href="{{asset('assets/vendor/glightbox/css/glightbox.min.css')}}" rel="stylesheet">
+    <link href="{{asset('assets/vendor/remixicon/remixicon.css')}}" rel="stylesheet">
+    <link href="{{asset('assets/vendor/swiper/swiper-bundle.min.css')}}" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="assets/css/style.css" rel="stylesheet">
     <title>THEGOODS - Login</title>
 </head>
 
 <body>
-    <div class="v313_26">
-        <div class="v313_15"></div><span class="v313_16">THEGOODS</span><span class="v313_17">WELCOME!</span><span class="v313_18">Login to continue.</span>
-        <div class="name"></div>
-        <div class="v313_20"></div>
-        <div class="v313_21"></div><span class="v313_22">Username</span><span class="v313_23">Password</span><span class="v313_24">Dont have an account? <a href="#">Sign up</a> instead</span>
+    <div class="text-center mt-5">
+        <img src="../assets/img/apple-touch-icon.png" alt="" style="width:30vh">
     </div>
+    <form>
+        <div class="row mt-2">
+            <div class="col-4"></div>
+            <div class="col-4">
+                <!-- Email input -->
+        <div class="form-outline mb-4">
+            <label class="form-label" for="form2Example1">Email address</label>
+            <input type="email" id="form2Example1" class="form-control" />
+          </div>
+
+          <!-- Password input -->
+          <div class="form-outline mb-4">
+            <label class="form-label" for="form2Example2">Password</label>
+            <input type="password" id="form2Example2" class="form-control" />
+          </div>
+
+          <!-- Submit button -->
+          <div class="text-center">
+            <button type="button" class="btn btn-primary btn-block mb-4 w-50">Sign in</button>
+          </div>
+
+
+          <!-- Register buttons -->
+          <div class="text-center">
+            <p>Not a member? <a href="#!">Register</a></p>
+
+          </div>
+            </div>
+            <div class="col-4"></div>
+        </div>
+
+      </form>
 </body>
 
 </html>
+
+
