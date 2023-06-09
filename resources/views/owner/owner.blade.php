@@ -90,7 +90,7 @@
             <img src="{{ asset('admintemplate/') }}/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
           </div>
           <div class="info">
-            <a href="" class="d-block">Store Owner</a>
+            <a href="" class="d-block">Supplier</a>
           </div>
         </div>
 
@@ -158,24 +158,55 @@
                 <!-- Small boxes (Stat box) -->
                 <div class="card">
                     <div class="card-header border-0">
-                      <h3 class="card-title">Stock in Warehouse : {{$sum}}</h3>
+                      <h3 class="card-title">Stock in Warehouse : {{400 - $sepatu - $sandal - $lays - $cocacola - $tissue - $oil - $gula - $pasta_gigi - $sabun_piring - $deterjen + 
+                      $buysepatu + $buysandal + $buylays + $buycocacola + $buytissue + $buyoil + $buypasta_gigi + $buysabun_piring + $buydeterjen}}</h3>
                     </div>
                     <div class="card-body table-responsive p-0">
                       <table class="table table-striped table-valign-middle">
                         <thead>
                           <tr>
                             <th>Name</th>
-                            <th>Stock</th>
+                            <th>Quantity</th>
                           </tr>
                         </thead>
-                        @foreach ($products as $p )
                         <tbody>
-                            <tr>
-                              <td>{{$p->product_name}}</td>
-                              <td>{{$p->stock}}</td>
-                            </tr>
-                          </tbody>
-                        @endforeach
+                          <tr>
+                            <td>Sepatu</td>
+                            <td>{{40 - $sepatu + $buysepatu}}</td>
+                          </tr>
+                          <tr>
+                            <td>Sandal</td>
+                            <td>{{40 - $sandal +  $buysandal}}</td>
+                          </tr>
+                          <tr>
+                            <td>Lays</td>
+                            <td>{{40 - $lays + $buylays}}</td>
+                          </tr>
+                          <tr>
+                            <td>Cocacola</td>
+                            <td>{{40 - $cocacola + $buycocacola}}</td>
+                          </tr>
+                          <tr>
+                            <td>Tissue</td>
+                            <td>{{40 - $tissue + $buytissue}}</td>
+                          </tr>
+                          <tr>
+                            <td>Oil</td>
+                            <td>{{40 - $oil + $buyoil}}</td>
+                          </tr>
+                          <tr>
+                            <td>Pasta Gigi</td>
+                            <td>{{40 - $pasta_gigi + $buypasta_gigi}}</td>
+                          </tr>
+                          <tr>
+                            <td>Sabun Piring</td>
+                            <td>{{40 - $sabun_piring + $buysabun_piring}}</td>
+                          </tr>
+                          <tr>
+                            <td>Deterjen</td>
+                            <td>{{40 - $deterjen + $buydeterjen}}</td>
+                          </tr>
+                        </tbody>
                        
                       </table>
                     </div>
@@ -245,60 +276,5 @@
   <!-- AdminLTE for demo purposes -->
   <script src="{{ asset('admintemplate/') }}/dist/js/demo.js"></script>
 </body>
-<script>
-    function up(className){
-        let text = document.getElementById('jumlah_' + className).textContent; //mendapatkan text dari jumlah barang
-        let jumlah = parseInt(text); //mendapatkan angka spesifik jumlah
-        jumlah++; //increment karena fungsi up
-        document.getElementById('kuantitas_' + className).value = jumlah; //masukkan perubahan ke input value
-        document.getElementById('jumlah_' + className).innerHTML = jumlah + " kg";
 
-        //ambil data harga
-        let totalHarga = document.getElementById('totalPrice').textContent;
-        let harga = totalHarga.split('Rp');
-
-        //hitung harga baru sesuai dengan jenis sampah yang diubah
-        let hargaBaru = parseInt(harga[1]);
-        let kuantitas = 0;
-
-        switch(className){
-            case 'newspaper':
-            hargaBaru+=240;
-            kuantitas+=1;
-            break;
-            case "cardboard":
-            hargaBaru+=100;
-            kuantitas+=1;
-            break;
-            case "plasticBag":
-            hargaBaru+=40;
-            kuantitas+=1;
-            break;
-            case "plasticGlass":
-            hargaBaru+=300;
-            kuantitas+=1;
-            break;
-            case "aluminium":
-            hargaBaru+=1400;
-            kuantitas+=1;
-            break;
-            case "copper":
-            hargaBaru+=9000;
-            kuantitas+=1;
-            break;
-            case "metals":
-            hargaBaru+=200;
-            kuantitas+=1;
-            break;
-            case "glass":
-            hargaBaru+=20;
-            kuantitas+=1;
-            break;
-        }
-
-        //update total price dan bpoints
-        document.getElementById('kuantitas').textContent = kuantitas;
-        updateBpoints();
-    }
-</script>
 </html>

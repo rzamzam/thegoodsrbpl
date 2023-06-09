@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Products;
+use App\Models\Purchase;
+use Illuminate\Support\Facades\DB;
 
 class OwnerController extends Controller
 {
@@ -38,7 +40,31 @@ class OwnerController extends Controller
     {
         $products = Products::all();
         $sum = Products::sum('stock');
-        return view('owner.owner', compact('products', 'sum'));
+        $sepatu = DB::table('purchases_store')->sum('sepatu');
+        $sandal = Purchase::sum('sandal');
+        $lays = Purchase::sum('lays');
+        $cocacola = Purchase::sum('cocacola');
+        $deterjen = Purchase::sum('detergen');
+        $tissue = Purchase::sum('tissue');
+        $oil = Purchase::sum('oil');
+        $gula = Purchase::sum('gula');
+        $pasta_gigi = Purchase::sum('pasta_gigi');
+        $sabun_piring = Purchase::sum('sabun_piring');
+        $buysepatu = DB::table('purchase_suppliers')->sum('sepatu');
+        $buysandal = DB::table('purchase_suppliers')->sum('sandal');
+        $buylays = DB::table('purchase_suppliers')->sum('lays');
+        $buycocacola = DB::table('purchase_suppliers')->sum('cocacola');
+        $buydeterjen = DB::table('purchase_suppliers')->sum('detergen');
+        $buytissue = DB::table('purchase_suppliers')->sum('tissue');
+        $buyoil = DB::table('purchase_suppliers')->sum('oil');
+        $buygula = DB::table('purchase_suppliers')->sum('gula');
+        $buypasta_gigi = DB::table('purchase_suppliers')->sum('pasta_gigi');
+        $buysabun_piring = DB::table('purchase_suppliers')->sum('sabun_piring');
+        return view('owner.owner', 
+        compact('products', 'sum', 'sepatu', 'sandal', 'lays', 'cocacola', 
+        'deterjen', 'oil', 'gula', 'pasta_gigi', 'sabun_piring', 'tissue',
+        'buysepatu', 'buysandal', 'buylays', 'buycocacola', 'buydeterjen', 'buytissue',
+            'buyoil', 'buygula', 'buypasta_gigi', 'buysabun_piring'));
     }
 
     /**

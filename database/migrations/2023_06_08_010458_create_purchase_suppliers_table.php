@@ -13,17 +13,18 @@ return new class extends Migration
     {
         Schema::create('purchase_suppliers', function (Blueprint $table) {
             $table->id('purchaseSupplier_id');
-            $table->integer('sepatu')->nullable();
-            $table->integer('sandal')->nullable();
-            $table->integer('lays')->nullable();
-            $table->integer('cocacola')->nullable();
-            $table->integer('tissue')->nullable();
-            $table->integer('oil')->nullable();
-            $table->integer('gula')->nullable();
-            $table->integer('pasta_gigi')->nullable();
-            $table->integer('sabun_piring')->nullable();
-            $table->integer('detergen')->nullable();
-            $table->integer('totalprice')->nullable();
+            $table->integer('sepatu');
+            $table->integer('sandal');
+            $table->integer('lays');
+            $table->integer('cocacola');
+            $table->integer('tissue');
+            $table->integer('oil');
+            $table->integer('gula');
+            $table->integer('pasta_gigi');
+            $table->integer('sabun_piring');
+            $table->integer('detergen');
+            $table->integer('totalprice');
+            $table->foreignUuid('user_id')->constraint();
             $table->timestamps();
         });
     }

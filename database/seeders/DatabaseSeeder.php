@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class DatabaseSeeder extends Seeder
 {
@@ -12,11 +13,45 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // \App\Models\User::factory(10)->create();
-
-        // \App\Models\User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
-        // ]);
+        DB::table('products')->insert([
+            'product_name'=>'sepatu',
+            'stock'=>40,
+        ]);
+        DB::table('products')->insert([
+            'product_name'=>'sandal',
+            'stock'=>40,
+        ]);
+        DB::table('products')->insert([
+            'product_name'=>'lays',
+            'stock'=>40,
+        ]);
+        DB::table('products')->insert([
+            'product_name'=>'cocacola',
+            'stock'=>40,
+        ]);
+        DB::table('products')->insert([
+            'product_name'=>'tissue',
+            'stock'=>40,
+        ]);
+        DB::table('products')->insert([
+            'product_name'=>'oil',
+            'stock'=>40,
+        ]);
+        DB::table('products')->insert([
+            'product_name'=>'gula',
+            'stock'=>40,
+        ]);
+        DB::table('products')->insert([
+            'product_name'=>'pasta_gigi',
+            'stock'=>40,
+        ]);
+        DB::table('products')->insert([
+            'product_name'=>'sabun_piring',
+            'stock'=>40,
+        ]);
+        DB::table('products')->insert([
+            'product_name'=>'deterjen',
+            'stock'=>40,
+        ]);
     }
 }

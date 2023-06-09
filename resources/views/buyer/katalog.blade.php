@@ -2,7 +2,12 @@
 @section('isi')
 
 <div class="container">
+    {{-- @if (Auth::role_id() == 'buyer')
     <form method="POST" action="buyer/purchase">
+        @else
+        <form method="POST" action="owner/purchase">
+    @endif --}}
+    <form method="POST" action="owner/purchase">
         @csrf
     <div class="row g-4 row-cols-lg-5 row-cols-2 row-cols-md-3">
         <div class="col">
