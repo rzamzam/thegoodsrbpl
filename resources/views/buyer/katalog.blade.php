@@ -2,6 +2,8 @@
 @section('isi')
 
 <div class="container">
+    <form method="POST" action="buyer/purchase">
+        @csrf
     <div class="row g-4 row-cols-lg-5 row-cols-2 row-cols-md-3">
         <div class="col">
             <div class="card card-product">
@@ -346,10 +348,11 @@
                     </h1>
                     <div class="align-items-center mt-1 mb-2">
                         <div>
-                            <span class="text-dark fs-3" id="totalPrice">Rp 0</span>
+                            <span class="text-dark fs-3" id="totalPrice">Rp0</span>
+                            <input type="hidden" name="totalPriceInt" id="totalPriceInt" value="0">
                         </div>
                     </div>
-                    <button type="button" class="btn btn-warning mt-3 w-50 mb-4">Order</button>
+                    <button type="submit" class="btn btn-warning mt-3 w-50 mb-4">Order</button>
                 </div>
             </div>
         </div>
@@ -364,6 +367,7 @@
             </div>
         </div>
     </div>
+    </form>
 </div>
 
 <script>
@@ -420,6 +424,7 @@
 
             //update total price dan bpoints
             document.getElementById('totalPrice').textContent = 'Rp' + hargaBaru;
+            updateTotalPrice();
         }
     }
 
@@ -471,6 +476,14 @@
         }
         //update total price dan bpoints
         document.getElementById('totalPrice').textContent = 'Rp' + hargaBaru;
+        updateTotalPrice();
+    }
+    function updateTotalPrice(){
+        let totalHarga = document.getElementById('totalPrice').textContent;
+        let harga = totalHarga.split('Rp');
+        let totalprice = parseInt(harga[1])*1;
+        // document.getElementById('totalprice').textContent = totalprice;
+        document.getElementById('totalPriceInt').value = totalprice;
     }
 </script>
 @endsection

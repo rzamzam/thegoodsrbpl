@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\OwnerController;
+use App\Http\Controllers\InvoiceController;
+use App\Http\Controllers\PurchaseController;
 
 /*
 |--------------------------------------------------------------------------
@@ -41,7 +43,10 @@ Route::get('/admin', function () {
 Route::get('/admin', [AdminController::class, 'show']);
 Route::get('/supplier', [AdminController::class, 'showSupplier']);
 Route::get('/owner', [OwnerController::class, 'show']);
+Route::get('/history', [PurchaseController::class, 'history']);
+Route::get('/buyer/invoice/{id}', [PurchaseController::class, 'viewInvoice']);
 Route::post('/admin/adduser', [AdminController::class, 'store']);
+Route::post('/buyer/purchase', [PurchaseController::class, 'store']);
 
 Route::get('/layout', function () {
     return view('layouts.layout');
@@ -59,6 +64,4 @@ Route::get('/invoice', function () {
     return view('buyer.invoice');
 });
 
-Route::get('/history', function () {
-    return view('buyer.history');
-});
+Route::post('/logout', [LoginController::class, 'logout']); //logout

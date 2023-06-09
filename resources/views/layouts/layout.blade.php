@@ -77,7 +77,14 @@
                         </ul>
                     </li>
                     <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
-                    <li><a class="getstarted scrollto" href="#about">Get Started</a></li>
+                    @if (Auth::check())
+                    <form action="/logout" method="POST">
+                        @csrf
+                        <li><a class="getstarted scrollto" href="#about">Logout</a></li>
+                    </form>
+                    @endif
+                    <li><a class="getstarted scrollto" href="#about">Login</a></li>
+                    <li><a class="getstarted scrollto" href="#about">Register</a></li>
                 </ul>
                 <i class="bi bi-list mobile-nav-toggle"></i>
             </nav><!-- .navbar -->

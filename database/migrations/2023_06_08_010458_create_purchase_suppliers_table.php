@@ -11,8 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('purchases_store', function (Blueprint $table) {
-            $table->id('purchase_id');
+        Schema::create('purchase_suppliers', function (Blueprint $table) {
+            $table->id('purchaseSupplier_id');
             $table->integer('sepatu')->nullable();
             $table->integer('sandal')->nullable();
             $table->integer('lays')->nullable();
@@ -24,10 +24,8 @@ return new class extends Migration
             $table->integer('sabun_piring')->nullable();
             $table->integer('detergen')->nullable();
             $table->integer('totalprice')->nullable();
-            $table->foreignUuid('user_id')->constraint();
             $table->timestamps();
         });
-        // sepatu, sandal, snack, soda kaleng, tisue, minyak goreng, gula, pasta gigi, sabun cuci piring, deterjen
     }
 
     /**
@@ -35,6 +33,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('purchases');
+        Schema::dropIfExists('purchase_suppliers');
     }
 };
