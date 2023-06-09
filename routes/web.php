@@ -21,10 +21,6 @@ use App\Http\Controllers\PurchaseSupplierController;
 |
 */
 
-Route::get('/home', function () {
-    return view('homepage');
-});
-
 
 Route::get('/admin/adduser', function () {
     return view('admin.adduser');
@@ -57,7 +53,7 @@ Route::get('/invoice', function () {
 
 Route::post('/logout', [LoginController::class, 'logout']); //logout
 
-Route::get('/homepage', function () {
+Route::get('/', function () {
     return view('home');
 });
 Route::get('/katalog', function () {

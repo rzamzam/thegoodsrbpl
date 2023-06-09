@@ -33,7 +33,7 @@ class LoginController extends Controller
         //     // return redirect()->route('login');
         //     return redirect('/katalog');
         // }
-        return redirect('/register');
+        return redirect('/homepage');
     }
     public function logout(Request $request)
     {
@@ -45,6 +45,6 @@ class LoginController extends Controller
 
         return redirect('/');
     }
-    
-    
+
+
 }
