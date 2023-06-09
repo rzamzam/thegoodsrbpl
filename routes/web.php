@@ -16,7 +16,11 @@ use App\Http\Controllers\OwnerController;
 */
 
 Route::get('/', function () {
-    return view('auth.login');
+    return view('login');
+});
+
+Route::get('/register', function () {
+    return view('register');
 });
 
 Route::get('/home', function () {
