@@ -18,7 +18,7 @@ class LoginController extends Controller
         if(Auth::attempt($credentials)){
             $request->session()->regenerate();
             if(Auth::user()->role_id === 1){
-                return redirect('/buyer/katalog');
+                return redirect('/katalog');
             } elseif(Auth::user()->role_id === 2){
                 return redirect('/supplier');
             } elseif(Auth::user()->role_id === 3){
