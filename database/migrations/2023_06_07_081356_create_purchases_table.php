@@ -23,7 +23,7 @@ return new class extends Migration
             $table->integer('pasta_gigi');
             $table->integer('sabun_piring');
             $table->integer('detergen');
-            $table->integer('totalprice');
+            $table->integer('totalprice')->nullable();
             $table->foreignUuid('user_id')->constraint();
             $table->timestamps();
         });

@@ -60,11 +60,24 @@ class OwnerController extends Controller
         $buygula = DB::table('purchase_suppliers')->sum('gula');
         $buypasta_gigi = DB::table('purchase_suppliers')->sum('pasta_gigi');
         $buysabun_piring = DB::table('purchase_suppliers')->sum('sabun_piring');
+        $january = Purchase::whereMonth('created_at','01')->get()->count(); 
+    	$february = Purchase::whereMonth('created_at','02')->get()->count(); 
+    	$march = Purchase::whereMonth('created_at','03')->get()->count(); 
+    	$april = Purchase::whereMonth('created_at','04')->get()->count(); 
+    	$may = Purchase::whereMonth('created_at','05')->get()->count(); 
+    	$june = Purchase::whereMonth('created_at','06')->get()->count(); 
+    	$july = Purchase::whereMonth('created_at','07')->get()->count(); 
+    	$august = Purchase::whereMonth('created_at','08')->get()->count(); 
+    	$september = Purchase::whereMonth('created_at','09')->get()->count(); 
+    	$october = Purchase::whereMonth('created_at','10')->get()->count(); 
+    	$november = Purchase::whereMonth('created_at','11')->get()->count(); 
+    	$december = Purchase::whereMonth('created_at','12')->get()->count(); 
         return view('owner.owner', 
         compact('products', 'sum', 'sepatu', 'sandal', 'lays', 'cocacola', 
         'deterjen', 'oil', 'gula', 'pasta_gigi', 'sabun_piring', 'tissue',
         'buysepatu', 'buysandal', 'buylays', 'buycocacola', 'buydeterjen', 'buytissue',
-            'buyoil', 'buygula', 'buypasta_gigi', 'buysabun_piring'));
+            'buyoil', 'buygula', 'buypasta_gigi', 'buysabun_piring', 'january','february','march', 'may', 'april','june','july', 'august', 'september',
+        'october', 'november', 'december'));
     }
 
     /**

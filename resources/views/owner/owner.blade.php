@@ -126,7 +126,7 @@
         <div class="container-fluid">
           <!-- Small boxes (Stat box) -->
           @yield('container')
-         
+
           <section class="content">
             @if ($message = Session::get('done'))
             <div class="alert alert-success alert-block mt-3">
@@ -158,7 +158,7 @@
                 <!-- Small boxes (Stat box) -->
                 <div class="card">
                     <div class="card-header border-0">
-                      <h3 class="card-title">Stock in Warehouse : {{400 - $sepatu - $sandal - $lays - $cocacola - $tissue - $oil - $gula - $pasta_gigi - $sabun_piring - $deterjen + 
+                      <h3 class="card-title">Stock in Warehouse : {{400 - $sepatu - $sandal - $lays - $cocacola - $tissue - $oil - $gula - $pasta_gigi - $sabun_piring - $deterjen +
                       $buysepatu + $buysandal + $buylays + $buycocacola + $buytissue + $buyoil + $buypasta_gigi + $buysabun_piring + $buydeterjen}}</h3>
                     </div>
                     <div class="card-body table-responsive p-0">
@@ -172,48 +172,48 @@
                         <tbody>
                           <tr>
                             <td>Sepatu</td>
-                            <td>{{40 - $sepatu + $buysepatu}}</td>
+                            <td>{{400 - $sepatu + $buysepatu}}</td>
                           </tr>
                           <tr>
                             <td>Sandal</td>
-                            <td>{{40 - $sandal +  $buysandal}}</td>
+                            <td>{{400 - $sandal +  $buysandal}}</td>
                           </tr>
                           <tr>
                             <td>Lays</td>
-                            <td>{{40 - $lays + $buylays}}</td>
+                            <td>{{400 - $lays + $buylays}}</td>
                           </tr>
                           <tr>
                             <td>Cocacola</td>
-                            <td>{{40 - $cocacola + $buycocacola}}</td>
+                            <td>{{400 - $cocacola + $buycocacola}}</td>
                           </tr>
                           <tr>
                             <td>Tissue</td>
-                            <td>{{40 - $tissue + $buytissue}}</td>
+                            <td>{{400 - $tissue + $buytissue}}</td>
                           </tr>
                           <tr>
                             <td>Oil</td>
-                            <td>{{40 - $oil + $buyoil}}</td>
+                            <td>{{400 - $oil + $buyoil}}</td>
                           </tr>
                           <tr>
                             <td>Pasta Gigi</td>
-                            <td>{{40 - $pasta_gigi + $buypasta_gigi}}</td>
+                            <td>{{400 - $pasta_gigi + $buypasta_gigi}}</td>
                           </tr>
                           <tr>
                             <td>Sabun Piring</td>
-                            <td>{{40 - $sabun_piring + $buysabun_piring}}</td>
+                            <td>{{400 - $sabun_piring + $buysabun_piring}}</td>
                           </tr>
                           <tr>
                             <td>Deterjen</td>
-                            <td>{{40 - $deterjen + $buydeterjen}}</td>
+                            <td>{{400 - $deterjen + $buydeterjen}}</td>
                           </tr>
                         </tbody>
-                       
+
                       </table>
                     </div>
                   </div>
                 <!-- /.row -->
                 <!-- Main row -->
-    
+                <div id="curve_chart" style="width: 900px; height: 500px"></div>
             </div>
           <!-- /.row -->
           <!-- Main row -->
@@ -224,6 +224,9 @@
     </section>
     <!-- /.content -->
   </div>
+
+
+
   <!-- /.content-wrapper -->
   <footer class="main-footer">
     <strong>Copyright &copy; 2022 <a href="http://adminlte.io">Buang.in</a>.</strong>
@@ -275,6 +278,39 @@
   <script src="{{ asset('admintemplate/') }}/dist/js/pages/dashboard.js"></script>
   <!-- AdminLTE for demo purposes -->
   <script src="{{ asset('admintemplate/') }}/dist/js/demo.js"></script>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+      <script type="text/javascript">
+        google.charts.load('current', {'packages':['corechart']});
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+          var data = google.visualization.arrayToDataTable([
+            ['Month', 'Sales' ],
+            ['Jan',  {{$january}}],
+            ['Feb',   {{$february}}     ],
+            ['Mar',   {{$march}}       ],
+            ['Apr',   {{$april}}      ],
+            ['May',   {{$may}}      ],
+            ['Jun',   {{$june}}      ],
+            ['Jul',   {{$july}}      ],
+            ['Aug',   {{$august}}      ],
+            ['Sep',   {{$september}}      ],
+            ['Oct',   {{$october}}      ],
+            ['Nov',   {{$november}}      ],
+            ['Dec',   {{$december}}      ],
+          ]);
+
+          var options = {
+            title: 'Sales Performance',
+            curveType: 'function',
+            legend: { position: 'bottom' }
+          };
+
+          var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+          chart.draw(data, options);
+        }
+      </script>
 </body>
 
 </html>

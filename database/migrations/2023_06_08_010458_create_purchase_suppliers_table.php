@@ -24,7 +24,7 @@ return new class extends Migration
             $table->integer('sabun_piring');
             $table->integer('detergen');
             $table->integer('totalprice');
-            $table->foreignUuid('user_id')->constraint();
+            $table->foreignUuid('user_id')->default(1)->constraint();
             $table->timestamps();
         });
     }
