@@ -100,6 +100,15 @@
             <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
             <li class="nav-item">
+              <a  class="nav-link" href="/katalog">
+                <i class="nav-icon fas fas fas fa-cart-arrow-down"></i>
+                <p>
+                  Add Products
+                  {{-- <i class="right fas fa-angle-left"></i> --}}
+                </p>
+              </a>
+            </li>
+            <li class="nav-item">
               <a  class="nav-link">
                 <i class="nav-icon fas fas fas fa-cart-arrow-down"></i>
                 <p>

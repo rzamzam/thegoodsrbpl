@@ -53,6 +53,10 @@
                     <label class="form-label" for="form2Example1">Email address</label>
                     <input name="email" type="email" id="form2Example1" class="form-control" />
                 </div>
+                <div class="form-outline mb-4">
+                    <label class="form-label" for="form2Example1">Nomor Telepon</label>
+                    <input name="telepon" type="email" id="form2Example1" class="form-control" />
+                </div>
 
                 <!-- Password input -->
                 <div class="form-outline mb-4">

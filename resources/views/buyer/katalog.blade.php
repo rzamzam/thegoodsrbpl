@@ -310,7 +310,7 @@
             </div>
         </div>
     </div>
-    {{-- @if (auth()->user()->role_id === 1) --}}
+    @if (auth()->user()->role_id === 1)
     <div class="row mt-5">
         <div class="col-2"></div>
         <div class="col-8">
@@ -322,19 +322,15 @@
                     <div class="mt-1 mb-2">
                             <div class="form-group">
                                 <label for="namaPenerima">Nama Penerima</label>
-                                <input type="text" class="form-control mt-2" id="namaPenerima" placeholder="Nama Lengkap">
+                                <input value="{{Auth::user()->name}}" type="text" class="form-control mt-2" id="namaPenerima" placeholder="Nama Lengkap">
                             </div>
                             <div class="form-group mt-3">
                               <label for="noHP">Nomor Handphone</label>
-                              <input type="number" class="form-control mt-2" id="noHP" placeholder="08xxxxxxxxxx">
+                              <input value="{{Auth::user()->telepon}}" type="text" class="form-control mt-2" id="noHP" placeholder="08xxxxxxxxxx">
                             </div>
                             <div class="form-group mt-3">
                                 <label for="alamat">Alamat Lengkap Tujuan</label>
-                                <input type="text" class="form-control mt-2" id="alamat" placeholder="Nama Jalan, Nomor Rumah, Kelurahan, Kecamatan, Kota, Provinsi">
-                            </div>
-                            <div class="form-group mt-3">
-                                <label for="note">Note</label>
-                                <input type="text" class="form-control mt-2" id="note" placeholder="Detail Lainnya">
+                                <input name="alamat" type="text" class="form-control mt-2" id="alamat" placeholder="Nama Jalan, Nomor Rumah, Kelurahan, Kecamatan, Kota, Provinsi">
                             </div>
                     </div>
                 </div>
@@ -342,7 +338,7 @@
         </div>
         <div class="col-2"></div>
     </div>
-    {{-- @endif --}}
+    @endif
     
     <div class="row text-center mt-5">
         <div class="col-3"></div>

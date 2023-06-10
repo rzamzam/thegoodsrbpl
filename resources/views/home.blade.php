@@ -10,8 +10,13 @@
             </div>
         </div>
         <div class="text-center">
-            <a href="#about" class="btn-get-started scrollto">Login to Buy Product</a>
-            <a href="#about" class="btn-get-started scrollto">Buy Product</a>
+            @if (Auth::check())
+            <a href="/katalog" class="btn-get-started scrollto">Buy Product</a>
+            @else
+            <a href="/login" class="btn-get-started scrollto">Login to Buy Product</a>
+            @endif
+            
+           
         </div>
     </div>
 </section>

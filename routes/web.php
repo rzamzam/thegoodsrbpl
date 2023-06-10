@@ -23,6 +23,7 @@ use App\Http\Controllers\PurchaseSupplierController;
 
 Route::get('/login', [LoginController::class, 'show']);
 Route::post('/login', [LoginController::class, 'authenticate']);
+Route::post('/logout', [LoginController::class, 'logout']); //logout
 Route::get('/admin/adduser', function () {
     return view('admin.adduser');
 });

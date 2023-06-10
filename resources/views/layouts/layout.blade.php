@@ -58,9 +58,15 @@
                     <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
                     <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
                    @if (Auth::check())
-                   <form action="/logout" method="POST">
+                   {{-- <form action="/logout" method="POST">
                     @csrf
-                    <li><a class="getstarted scrollto" href="/logout">Logout</a></li>
+                    <button type="submit">
+                        <li><a class="getstarted scrollto" href="/logout">Logout</a></li>
+                    </button>
+                    </form> --}}
+                    <form action="/logout" method="POST">
+                        @csrf
+                        <button type="submit">Logout</button>
                     </form>
                     @else
                     <li><a class="getstarted scrollto" href="/login">Login</a></li>
