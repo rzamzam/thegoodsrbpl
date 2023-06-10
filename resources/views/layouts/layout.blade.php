@@ -55,19 +55,18 @@
 
             <nav id="navbar" class="navbar">
                 <ul>
-                    <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-                    <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+                    <li><a class="nav-link scrollto active" href="/">Home</a></li>
+                    <li><a class="nav-link scrollto" href="/.#contact">Contact</a></li>
                    @if (Auth::check())
-                   {{-- <form action="/logout" method="POST">
-                    @csrf
-                    <button type="submit">
-                        <li><a class="getstarted scrollto" href="/logout">Logout</a></li>
-                    </button>
-                    </form> --}}
-                    <form action="/logout" method="POST">
-                        @csrf
-                        <button type="submit">Logout</button>
-                    </form>
+                   <li class="dropdown"><a href="#"><span>{{ Auth::user()->name }}</span> <i class="bi bi-chevron-down"></i></a>
+                    <ul>
+                        <li><a href="/history">Purchase History</a></li>
+                        <li><form action="/logout" method="POST">
+                            @csrf
+                            <button type="submit">Logout</button>
+                        </form></li>
+                    </ul>
+                </li>
                     @else
                     <li><a class="getstarted scrollto" href="/login">Login</a></li>
                     <li><a class="getstarted scrollto" href="/register">Register</a></li>
@@ -109,8 +108,8 @@
                     <div class="col-lg-3 col-md-6 footer-links">
                         <h4>Useful Links</h4>
                         <ul>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#contact">Contact</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="/">Home</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="/.#contact">Contact</a></li>
                         </ul>
                     </div>
 
