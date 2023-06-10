@@ -52,7 +52,7 @@
           <div class="text-center">
             <button type="submit" class="btn btn-primary btn-block mb-4 w-50">Sign in</button>
           </div>
-
+        </form>
 
           <!-- Register buttons -->
           <div class="text-center">
@@ -63,7 +63,7 @@
             <div class="col-4"></div>
         </div>
 
-      </form>
+     
 </body>
 
 </html>

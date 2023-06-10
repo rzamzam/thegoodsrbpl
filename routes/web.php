@@ -21,16 +21,14 @@ use App\Http\Controllers\PurchaseSupplierController;
 |
 */
 
-
+Route::get('/login', [LoginController::class, 'show']);
+Route::post('/login', [LoginController::class, 'authenticate']);
 Route::get('/admin/adduser', function () {
     return view('admin.adduser');
 });
-
 Route::get('/admin', [AdminController::class, 'showAdmin']);
 Route::get('/register', [RegisterController::class, 'show']);
 Route::post('/register', [RegisterController::class, 'store']);
-Route::get('/login', [LoginController::class, 'show']);
-Route::post('/login', [LoginController::class, 'authenticate']);
 Route::get('/supplier', [SupplierController::class, 'show']);
 Route::get('/owner', [OwnerController::class, 'show']);
 Route::get('/history', [PurchaseController::class, 'history']);

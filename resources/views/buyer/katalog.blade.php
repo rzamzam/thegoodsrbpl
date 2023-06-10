@@ -2,13 +2,12 @@
 @section('isi')
 
 <div class="container">
-    {{-- @if(auth()->user()->role_id == 1)
+    @if(auth()->user()->role_id == 1)
     <form method="POST" action="buyer/purchase">
-        @else
+        @elseif (auth()->user()->role_id == 2)
         <form method="POST" action="owner/purchase">
     @endif
-    <form method="POST" action="owner/purchase"> --}}
-    <form method="POST" action="/buyer/purchase">
+    {{-- <form method="POST" action="/buyer/purchase"> --}}
         @csrf
     <div class="row g-4 row-cols-lg-5 row-cols-2 row-cols-md-3">
         <div class="col">
