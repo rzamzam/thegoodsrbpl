@@ -55,7 +55,7 @@ class PurchaseController extends Controller
             'user_id' => auth()->user()->user_id,
             'totalprice' => $request->totalPriceInt,
         ]);
-        return redirect()->back()->with('success');
+        return redirect('/pembayaran');
     }
 
     /**
@@ -70,6 +70,10 @@ class PurchaseController extends Controller
     {
         $purchases = Purchase::where('purchase_id', '=', $id)->first();
         return view('invoice_pdf', compact('purchases'));
+    }
+    public function pembayaran()
+    {
+        return view('buyer.pembayaran');
     }
 
     /**

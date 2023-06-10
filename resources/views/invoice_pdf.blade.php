@@ -121,47 +121,67 @@ table{
                                         <th class="w-50">Product Name</th>
                                         <th class="w-50">Qty</th>
                                     </tr>
+                                    @if ($purchases->sepatu > 0)
                                     <tr align="center">
                                         <td>Sepatu</td>
                                         <td>{{$purchases->sepatu}}</td>
                                     </tr>
+                                    @endif
+                                    @if ($purchases->sandal > 0)
                                     <tr align="center">
                                         <td>Sandal</td>
                                         <td>{{$purchases->sandal}}</td>
                                     </tr>
-
+                                    @endif
+                                    @if ($purchases->lays > 0)
                                     <tr align="center">
                                         <td>Lays</td>
                                         <td>{{$purchases->lays}}</td>
                                     </tr>
+                                    @endif
+                                    @if ($purchases->cocacola > 0)
                                     <tr align="center">
                                         <td>Coca Cola</td>
                                         <td>{{$purchases->cocacola}}</td>
                                     </tr>
+                                    @endif
+                                    @if ($purchases->tissue > 0)
                                     <tr align="center">
                                         <td>Tissue</td>
                                         <td>{{$purchases->tissue}}</td>
                                     </tr>
+                                    @endif
+                                    @if ($purchases->oil > 0)
                                     <tr align="center">
                                         <td>Oil</td>
                                         <td>{{$purchases->oil}}</td>
                                     </tr>
+                                    @endif
+                                    @if ($purchases->gula > 0)
                                     <tr align="center">
                                         <td>Gula</td>
                                         <td>{{$purchases->gula}}</td>
                                     </tr>
+                                    @endif
+                                    @if ($purchases->pasta_gigi > 0)
                                     <tr align="center">
                                         <td>Pasta Gigi</td>
                                         <td>{{$purchases->pasta_gigi}}</td>
                                     </tr>
+                                    @endif
+                                    @if ($purchases->sabun_piring > 0)
                                     <tr align="center">
                                         <td>Sabun Piring</td>
                                         <td>{{$purchases->sabun_piring}}</td>
                                     </tr>
+                                    @endif
+                                    @if ($purchases->detergen > 0)
                                     <tr align="center">
                                         <td>Deterjen</td>
                                         <td>{{$purchases->detergen}}</td>
                                     </tr>
+                                    @endif
+                                    
                                     <tr>
                                         <td colspan="7">
                                             <div class="total-part" >
@@ -190,6 +210,7 @@ table{
                 </div>
             </div>
         </div>
+        <input type="button" onclick="window.print();" value="print a div!" />
     </div>
 </html>
 

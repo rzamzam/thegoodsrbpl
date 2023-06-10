@@ -24,7 +24,7 @@
                         <span class="fs-5">A/N TheGoods</span>
                     </div>
                     <div class="mt-1 mb-2 ">
-                        <button type="button" class="btn btn-warning mt-3 w-50 mb-4 ">Konfirmasi Pembayaran</button>
+                        <a href="/"><button type="button" class="btn btn-warning mt-3 w-50 mb-4 ">Konfirmasi Pembayaran</button></a>
                         <br><small class="text-muted ">Lakukan konfirmasi pembayaran setelah melakukan pembayaran melalui transfer pada nomor rekening diatas dengan jumlah uang yang sesuai</small>
                     </div>
                 </div>
