@@ -84,7 +84,7 @@ table{
                             <div class="add-detail mt-10">
                                 <div class="w-50 float-left mt-10">
                                     <p class="m-0  text-bold w-100">Order Id - <span class="gray-color">{{$purchases->purchase_id}}</span></p>
-                                    <p class="m-0  text-bold w-100">Order Date - <span class="gray-color">{{$purchases->created_at}}</span></p>
+                                    <p class="m-0  text-bold w-100">Order Date - <span class="gray-color">{{$purchases->created_at->format('Y-m-d')}}</span></p>
                                 </div>
                                 <div class="w-50 float-left mt-10">
                                     <span class="logo fs-1" style="color:#fcda27">THEGOODS</span>
@@ -108,10 +108,8 @@ table{
                                         </td>
                                         <td>
                                             <div class="box-text">
-                                                <p> 410 Terry Ave N,</p>
-                                                <p>Seattle WA 98109,</p>
-                                                <p>United States</p>
-                                                <p>Contact: 1-206-266-1000</p>
+                                                <p>{{$purchases->alamat}}</p>
+                                                <p>{{Auth::user()->telepon}}</p>
                                             </div>
                                         </td>
                                     </tr>
@@ -162,17 +160,8 @@ table{
                                     </tr>
                                     <tr align="center">
                                         <td>Deterjen</td>
-                                        <td>{{$purchases->deterjen}}</td>
+                                        <td>{{$purchases->detergen}}</td>
                                     </tr>
-                                    
-                                    {{-- <tr align="center">
-                                        <td>Andoid Smart Phone</td>
-                                        <td>3</td>
-                                    </tr>
-                                    <tr align="center">
-                                        <td>Andoid Smart Phone</td>
-                                        <td>3</td>
-                                    </tr> --}}
                                     <tr>
                                         <td colspan="7">
                                             <div class="total-part" >

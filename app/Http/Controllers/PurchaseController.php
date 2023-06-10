@@ -61,9 +61,9 @@ class PurchaseController extends Controller
     /**
      * Display the specified resource.
      */
-    public function history()
+    public function viewHistory()
     {
-        $purchases = Purchase::where('user_id', '=', 1)->get();
+        $purchases = Purchase::where('user_id', '=', Auth::user()->user_id)->get();
         return view('buyer.history', compact('purchases'));
     }
     public function viewInvoice($id)
