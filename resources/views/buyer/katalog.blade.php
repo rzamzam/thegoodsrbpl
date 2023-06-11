@@ -2,9 +2,9 @@
 @section('isi')
 
 <div class="container">
-    @if(auth()->user()->role_id == 1)
+    @if(auth()->user()->role_id == '1')
     <form method="POST" action="buyer/purchase">
-        @elseif (auth()->user()->role_id == 2)
+        @elseif (auth()->user()->role_id == '2')
         <form method="POST" action="owner/purchase">
     @endif
     {{-- <form method="POST" action="/buyer/purchase"> --}}
