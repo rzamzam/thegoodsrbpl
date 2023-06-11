@@ -22,7 +22,6 @@ class RegisterController extends Controller
             'username' => $request->username,
             'email' => $request->email,
             'telepon' => $request->telepon,
-            'role_id'=>$request->role,
             'password' => Hash::make($request->password),
         ]);
          return redirect('/login');
