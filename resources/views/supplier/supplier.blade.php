@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Buang.in</title>
+  <title>thegoods</title>
   <link rel="icon" href="{{ asset('admintemplate/') }}/dist/img/Trinity.png">
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -226,7 +226,7 @@
   </div>
   <!-- /.content-wrapper -->
   <footer class="main-footer">
-    <strong>Copyright &copy; 2022 <a href="http://adminlte.io">Buang.in</a>.</strong>
+    <strong>Copyright &copy; 2022 <a href="http://adminlte.io">thegoods</a>.</strong>
     All rights reserved.
     <div class="float-right d-none d-sm-inline-block">
 
