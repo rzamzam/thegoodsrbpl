@@ -29,13 +29,13 @@ Route::get('/admin/adduser', function () {
     return view('admin.adduser');
 })->middleware('admin');
 Route::get('/admin', [AdminController::class, 'showAdmin'])->middleware('admin');
+Route::post('/admin/adduser', [RegisterController::class, 'storeAdmin']);
 Route::get('/register', [RegisterController::class, 'show']);
 Route::post('/register', [RegisterController::class, 'store']);
 Route::get('/supplier', [SupplierController::class, 'show'])->middleware('supplier');
 Route::get('/owner', [OwnerController::class, 'show'])->middleware('owner')->middleware('auth');
 Route::get('/buyer/invoice/{id}', [PurchaseController::class, 'viewInvoice']);
 Route::get('/history', [PurchaseController::class, 'viewHistory'])->middleware('auth');
-Route::post('/admin/adduser', [AdminController::class, 'store'])->middleware('admin');
 Route::post('/buyer/purchase', [PurchaseController::class, 'store']);
 Route::post('/owner/purchase', [PurchaseSupplierController::class, 'store']);
 

@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>THEGOODS</title>
-  <link rel="icon" href="{{ asset('admintemplate/') }}/dist/img/Trinity.png">
+  <link href="{{asset('assets/img/favicon.ico')}}" rel="icon">
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Font Awesome -->
@@ -186,17 +186,28 @@
                                         <input type="text" name="name" class="form-control" required>
                                     </div>
                                     <div class="form-group">
-                                        <label for="inputName">Age</label>
-                                        <input type="number" name="age" class="form-control">
+                                        <label for="inputName">Username</label>
+                                        <input type="text" name="username" class="form-control">
                                     </div>
                                     <div class="form-group">
-                                        <label for="inputStatus">Role</label>
-                                        <select id="inputStatus" name="role" class="form-control custom-select" required>
-                                            <option selected disabled hidden>Select one</option>
-                                            <option value="store-owner">Store Owner</option>
-                                            <option value="supplier">Supplier</option>
-                                        </select>
+                                        <label for="inputName">Email</label>
+                                        <input type="email" name="email" class="form-control">
                                     </div>
+                                    <div class="form-group">
+                                        <label for="inputName">Telepon</label>
+                                        <input type="text" name="telepon" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="inputName">Password</label>
+                                        <input type="password" name="password" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                      <label for="inputStatus">Role</label>
+                                      <select id="inputStatus" name="role" class="form-control custom-select" required>
+                                          <option selected disabled hidden>Select one</option>
+                                          <option value='2'>Owner</option>
+                                          <option value='3'>Supplier</option>
+                                  </div>
                                 </div>
                             </div>
                         </div>

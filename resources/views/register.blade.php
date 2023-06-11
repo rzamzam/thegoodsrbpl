@@ -57,7 +57,6 @@
                     <label class="form-label" for="form2Example1">Nomor Telepon</label>
                     <input name="telepon" type="text" id="form2Example1" class="form-control" />
                 </div>
-
                 <!-- Password input -->
                 <div class="form-outline mb-4">
                     <label class="form-label" for="form2Example2">Password</label>

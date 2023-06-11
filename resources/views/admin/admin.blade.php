@@ -7,7 +7,7 @@
   <title>THEGOODS
 
   </title>
-  <link rel="icon" href="{{ asset('admintemplate/') }}/dist/img/Trinity.png">
+  <link href="{{asset('assets/img/favicon.ico')}}" rel="icon">
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Font Awesome -->
@@ -180,16 +180,21 @@
                         <thead>
                           <tr>
                             <th>Name</th>
-                            <th>Age</th>
+                            <th>Telephone Number</th>
                             <th>Role</th>
                           </tr>
                         </thead>
-                        @foreach ($employees as $e )
+                        @foreach ($users as $u )
                         <tbody>
                             <tr>
-                              <td>{{$e->name}}</td>
-                              <td>{{$e->age}}</td>
-                              <td>{{$e->role}}</td>
+                              <td>{{$u->name}}</td>
+                              <td>{{$u->telepon}}</td>
+                              @if ($u->role_id=2)
+                              <td>Owner</td>
+                              @elseif ($u->role_id=3)
+                              <td>Supplier</td>
+                              @endif
+                              
                             </tr>
                           </tbody>
                         @endforeach

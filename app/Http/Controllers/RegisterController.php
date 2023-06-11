@@ -22,8 +22,21 @@ class RegisterController extends Controller
             'username' => $request->username,
             'email' => $request->email,
             'telepon' => $request->telepon,
+            'role_id'=>$request->role,
             'password' => Hash::make($request->password),
         ]);
          return redirect('/login');
+    }
+    public function storeAdmin(Request $request){
+        // dd($request->all());
+        $user = User::create([
+            'name' => $request->name,
+            'username' => $request->username,
+            'email' => $request->email,
+            'telepon' => $request->telepon,
+            'role_id'=>$request->role,
+            'password' => Hash::make($request->password),
+        ]);
+         return redirect('/admin');
     }
 }

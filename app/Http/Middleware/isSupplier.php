@@ -16,7 +16,7 @@ class isSupplier
      */
     public function handle(Request $request, Closure $next): Response
     {
-        if (Auth::check() && Auth::user()->role_id === 3) {
+        if (Auth::check() && Auth::user()->role_id === '3') {
             return $next($request);
           }
           return abort(403, 'Maaf Anda Tidak Memiliki Akses');

@@ -16,7 +16,7 @@ class isOwner
      */
     public function handle(Request $request, Closure $next): Response
     {
-        if (Auth::check() && Auth::user()->role_id === 2) {
+        if (Auth::check() && Auth::user()->role_id === '2') {
             return $next($request);
           }
           return abort(403, 'Maaf Anda Tidak Memiliki Akses');

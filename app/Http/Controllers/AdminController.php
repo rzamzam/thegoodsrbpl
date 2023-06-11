@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Employee;
+use App\Models\User;
 use App\Models\Products;
 
 class AdminController extends Controller
@@ -13,8 +14,8 @@ class AdminController extends Controller
      */
     public function showAdmin()
     {
-        $employees = Employee::all();
-        return view('admin.admin', compact('employees'));
+        $users = User::where('role_id', '2')->orWhere('role_id', '3')->get();
+        return view('admin.admin', compact('users'));
     }
     /**
      * Show the form for creating a new resource.
