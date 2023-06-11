@@ -17,11 +17,11 @@ class LoginController extends Controller
         ]);
         if(Auth::attempt($credentials)){
             $request->session()->regenerate();
-            if(Auth::user()->role_id === 1){ //buyer
+            if(Auth::user()->role_id === '1'){ //buyer
                 return redirect('/katalog');
-            } elseif(Auth::user()->role_id === 2){ //owner
+            } elseif(Auth::user()->role_id === '2'){ //owner
                 return redirect('/owner');
-            } elseif(Auth::user()->role_id === 3){ //supplier
+            } elseif(Auth::user()->role_id === '3'){ //supplier
                 return redirect('/supplier');
             } else{
                 return redirect('/admin'); //admin
