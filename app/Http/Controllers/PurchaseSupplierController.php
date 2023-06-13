@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\PurchaseSupplier;
+use Illuminate\Support\Facades\Auth;
 
 class PurchaseSupplierController extends Controller
 {
@@ -20,7 +21,7 @@ class PurchaseSupplierController extends Controller
             'pasta_gigi' => $request->jumlah_odol,
             'sabun_piring' => $request->jumlah_mama,
             'detergen' => $request->jumlah_tide,
-            'user_id' => 1,
+            'user_id' => auth()->user()->user_id,
             'totalprice' => $request->totalPriceInt,
         ]);
         return redirect('/owner')->back()->with('success');
@@ -28,6 +29,11 @@ class PurchaseSupplierController extends Controller
     public function viewHistory()
     {
         $purchases = PurchaseSupplier::where('user_id', '=', Auth::user()->user_id)->get();
-        return view('owner.historyOwner', compact('purchases'));
+        return view('buyer.historyOwner' , compact('purchases'));
+    }
+    public function viewInvoice($id)
+    {
+        $purchases = PurchaseSupplier::where('purchaseSupplier_id', '=', $id)->first();
+        return view('invoice_pdf', compact('purchases'));
     }
 }

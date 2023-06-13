@@ -22,7 +22,6 @@
                                 </tr>   
                                 @foreach ($purchases as $p)                     
                                 <tr align="center">
-                                   
                                     <td>{{$p->created_at}}</td>
                                     <td>{{$p->totalprice}}</td>
                                     <td>

@@ -35,8 +35,9 @@ Route::post('/register', [RegisterController::class, 'store']);
 Route::get('/supplier', [SupplierController::class, 'show'])->middleware('supplier');
 Route::get('/owner', [OwnerController::class, 'show'])->middleware('owner');
 Route::get('/buyer/invoice/{id}', [PurchaseController::class, 'viewInvoice']);
+Route::get('/owner/invoice/{id}', [PurchaseSupplierController::class, 'viewInvoice']);
 Route::get('/history', [PurchaseController::class, 'viewHistory'])->middleware('auth');
-Route::get('/history_owner', [PurchaseController::class, 'viewHistory'])->middleware('auth');
+Route::get('/history_owner', [PurchaseSupplierController::class, 'viewHistory'])->middleware('auth');
 Route::post('/buyer/purchase', [PurchaseController::class, 'store']);
 Route::post('/owner/purchase', [PurchaseSupplierController::class, 'store']);
 
