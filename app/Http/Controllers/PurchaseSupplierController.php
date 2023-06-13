@@ -23,6 +23,11 @@ class PurchaseSupplierController extends Controller
             'user_id' => 1,
             'totalprice' => $request->totalPriceInt,
         ]);
-        return redirect()->back()->with('success');
+        return redirect('/owner')->back()->with('success');
+    }
+    public function viewHistory()
+    {
+        $purchases = PurchaseSupplier::where('user_id', '=', Auth::user()->user_id)->get();
+        return view('owner.historyOwner', compact('purchases'));
     }
 }

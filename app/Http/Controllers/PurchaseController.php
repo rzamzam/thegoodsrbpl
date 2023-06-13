@@ -16,12 +16,6 @@ class PurchaseController extends Controller
     public function show(){
         return view('buyer.katalog');
     }
-    public function Invoice()
-    {
-        $pdf = PDF::loadView('invoice_pdf');
-
-        return $pdf->download('techsolutionstuff.pdf');
-    }
     public function index()
     {
         //

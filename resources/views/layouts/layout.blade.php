@@ -60,7 +60,12 @@
                    @if (Auth::check())
                    <li class="dropdown"><a href="#"><span>{{ Auth::user()->name }}</span> <i class="bi bi-chevron-down"></i></a>
                     <ul>
+                        @if (Auth::user()->user_id=='1')
                         <li><a href="/history">Purchase History</a></li>
+                        @elseif (Auth::user()->user_id=='2')
+                        <li><a href="/history_owner">Purchase History</a></li>
+                        @endif
+                        
                         <li><form action="/logout" method="POST">
                             @csrf
                             <button type="submit">Logout</button>

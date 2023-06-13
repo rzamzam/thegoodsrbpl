@@ -155,8 +155,8 @@
               <!-- Small boxes (Stat box) -->
               <div class="card">
                 <div class="card-header border-0">
-                  <h3 class="card-title">Stock in Warehouse : {{4000 + $buysepatu + $buysandal + $buylays + $buycocacola
-                      + $buytissue + $buyoil + $buypasta_gigi + $buysabun_piring + $buydeterjen}}</h3>
+                  <h3 class="card-title">Stock in Warehouse : {{4000 - $buysepatu - $buysandal - $buylays - $buycocacola
+                      - $buytissue - $buyoil - $buypasta_gigi - $buysabun_piring - $buydeterjen}}</h3>
                 </div>
                 <div class="card-body table-responsive p-0">
                   <table class="table table-striped table-valign-middle">
@@ -169,39 +169,39 @@
                     <tbody>
                       <tr>
                         <td>Sepatu</td>
-                        <td>{{400 + $buysepatu}}</td>
+                        <td>{{400 - $buysepatu}}</td>
                       </tr>
                       <tr>
                         <td>Sandal</td>
-                        <td>{{400 + $buysandal}}</td>
+                        <td>{{400 - $buysandal}}</td>
                       </tr>
                       <tr>
                         <td>Lays</td>
-                        <td>{{400 + $buylays}}</td>
+                        <td>{{400 - $buylays}}</td>
                       </tr>
                       <tr>
                         <td>Cocacola</td>
-                        <td>{{400 + $buycocacola}}</td>
+                        <td>{{400 - $buycocacola}}</td>
                       </tr>
                       <tr>
                         <td>Tissue</td>
-                        <td>{{400 + $buytissue}}</td>
+                        <td>{{400 - $buytissue}}</td>
                       </tr>
                       <tr>
                         <td>Oil</td>
-                        <td>{{400 + $buyoil}}</td>
+                        <td>{{400 - $buyoil}}</td>
                       </tr>
                       <tr>
                         <td>Pasta Gigi</td>
-                        <td>{{400 + $buypasta_gigi}}</td>
+                        <td>{{400 - $buypasta_gigi}}</td>
                       </tr>
                       <tr>
                         <td>Sabun Piring</td>
-                        <td>{{400 + $buysabun_piring}}</td>
+                        <td>{{400 - $buysabun_piring}}</td>
                       </tr>
                       <tr>
                         <td>Deterjen</td>
-                        <td>{{400 + $buydeterjen}}</td>
+                        <td>{{400 - $buydeterjen}}</td>
                       </tr>
                     </tbody>
 
