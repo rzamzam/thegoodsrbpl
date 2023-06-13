@@ -31,11 +31,9 @@
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
-   <!-- Line Chart -->
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"
-   integrity="sha512-QSkVNOCYLtj73J4hbmVoOV6KVZuMluZlioC+trLpewV8qMjsWqlIQvkn1KGX2StWvPMdWGBqim1xlC8krl1EKQ=="
-   crossorigin="anonymous" referrerpolicy="no-referrer"></script>
- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- Line Chart -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js" integrity="sha512-QSkVNOCYLtj73J4hbmVoOV6KVZuMluZlioC+trLpewV8qMjsWqlIQvkn1KGX2StWvPMdWGBqim1xlC8krl1EKQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">
@@ -59,29 +57,28 @@
       <!-- Right navbar links -->
       <div class="collapse navbar-collapse justify-content-end" id=" toggleMenu">
 
-            <ul class="nav" style="margin-right: 10px">
-                <form action="/logout" method="POST">
-                    @csrf
-                    <li>
-                <button>Logout</button>
+        <ul class="nav" style="margin-right: 10px">
+          <form action="/logout" method="POST">
+            @csrf
+            <li>
+              <button>Logout</button>
             </li>
-            </form>
+          </form>
 
 
-            </ul>
+        </ul>
 
 
 
-    </div>
+      </div>
     </nav>
     <!-- /.navbar -->
     <!-- Main Sidebar Container -->
     <aside class="main-sidebar sidebar-dark-primary elevation-4">
       <!-- Brand Logo -->
       <a href="/" class="brand-link">
-        <img src="{{ asset('../assets/img/apple-touch-icon.png') }}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
-          style="opacity: .8">
-        <span class="brand-text font-weight-light">thegoods</span>
+        <img src="{{ asset('../assets/img/apple-touch-icon.png') }}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+        <span class="brand-text font-weight-light">THEGOODS</span>
       </a>
 
       <!-- Sidebar -->
@@ -102,7 +99,7 @@
             <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
             <li class="nav-item">
-              <a  class="nav-link">
+              <a class="nav-link">
                 <i class="nav-icon fas fas fas fa-cart-arrow-down"></i>
                 <p>
                   User
@@ -145,69 +142,69 @@
           <section class="content">
             @if ($message = Session::get('done'))
             <div class="alert alert-success alert-block mt-3">
-            <button type="button" class="close" data-dismiss="alert">×</button>
+              <button type="button" class="close" data-dismiss="alert">×</button>
               <strong>{{ $message }}</strong>
-             </div>
+            </div>
             @endif
             <div class="container-fluid">
-                <div class="content-header">
-                    <div class="container-fluid">
-                      <div class="row mb-2">
-                        <div class="col-sm-6">
-                          <h1 class="m-0 text-dark">Dashboard</h1>
-                        </div><!-- /.col -->
-                        <div class="col-sm-6">
-                          <ol class="breadcrumb float-sm-right">
-                            <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item active">Dashboard</li>
-                          </ol>
-                        </div><!-- /.col -->
-                      </div><!-- /.row -->
-                    </div><!-- /.container-fluid -->
-                  </div>
-                <div class="row mb-2">
+              <div class="content-header">
+                <div class="container-fluid">
+                  <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1 class="db-title m-0 text-dark " style="font-size: 25px;font-weight:600;"></h1>
-                    </div>
+                      <h1 class="m-0 text-dark">Dashboard</h1>
+                    </div><!-- /.col -->
+                    <div class="col-sm-6">
+                      <ol class="breadcrumb float-sm-right">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item active">Dashboard</li>
+                      </ol>
+                    </div><!-- /.col -->
+                  </div><!-- /.row -->
+                </div><!-- /.container-fluid -->
+              </div>
+              <div class="row mb-2">
+                <div class="col-sm-6">
+                  <h1 class="db-title m-0 text-dark " style="font-size: 25px;font-weight:600;"></h1>
                 </div>
-                <!-- Small boxes (Stat box) -->
-                <div class="card">
-                    <div class="card-header border-0">
-                      <h3 class="card-title">User</h3>
-                    </div>
-                    <div class="card-body table-responsive p-0">
-                      <table class="table table-striped table-valign-middle">
-                        <thead>
-                          <tr>
-                            <th>Name</th>
-                            <th>Telephone Number</th>
-                            <th>Role</th>
-                          </tr>
-                        </thead>
-                        @foreach ($users as $u )
-                        <tbody>
-                            <tr>
-                              <td>{{$u->name}}</td>
-                              <td>{{$u->telepon}}</td>
-                              @if ($u->role_id=2)
-                              <td>Owner</td>
-                              @elseif ($u->role_id=3)
-                              <td>Supplier</td>
-                              @endif
-                              
-                            </tr>
-                          </tbody>
-                        @endforeach
+              </div>
+              <!-- Small boxes (Stat box) -->
+              <div class="card">
+                <div class="card-header border-0">
+                  <h3 class="card-title">User</h3>
+                </div>
+                <div class="card-body table-responsive p-0">
+                  <table class="table table-striped table-valign-middle">
+                    <thead>
+                      <tr>
+                        <th>Name</th>
+                        <th>Telephone Number</th>
+                        <th>Role</th>
+                      </tr>
+                    </thead>
+                    @foreach ($users as $u )
+                    <tbody>
+                      <tr>
+                        <td>{{$u->name}}</td>
+                        <td>{{$u->telepon}}</td>
+                        @if ($u->role_id=2)
+                        <td>Owner</td>
+                        @elseif ($u->role_id=3)
+                        <td>Supplier</td>
+                        @endif
 
-                      </table>
-                    </div>
-                  </div>
-                <!-- /.row -->
-                <!-- Main row -->
+                      </tr>
+                    </tbody>
+                    @endforeach
+
+                  </table>
+                </div>
+              </div>
+              <!-- /.row -->
+              <!-- Main row -->
 
             </div>
-          <!-- /.row -->
-          <!-- Main row -->
+            <!-- /.row -->
+            <!-- Main row -->
 
         </div>
         <!-- /.row (main row) -->

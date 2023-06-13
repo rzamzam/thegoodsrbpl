@@ -4,8 +4,8 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>thegoods</title>
-  <link rel="icon" href="{{ asset('admintemplate/') }}/dist/img/Trinity.png">
+  <title>THEGOODS</title>
+  <link href="{{asset('assets/img/favicon.ico')}}" rel="icon">
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Font Awesome -->
@@ -29,11 +29,9 @@
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
-   <!-- Line Chart -->
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"
-   integrity="sha512-QSkVNOCYLtj73J4hbmVoOV6KVZuMluZlioC+trLpewV8qMjsWqlIQvkn1KGX2StWvPMdWGBqim1xlC8krl1EKQ=="
-   crossorigin="anonymous" referrerpolicy="no-referrer"></script>
- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- Line Chart -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js" integrity="sha512-QSkVNOCYLtj73J4hbmVoOV6KVZuMluZlioC+trLpewV8qMjsWqlIQvkn1KGX2StWvPMdWGBqim1xlC8krl1EKQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">
@@ -57,29 +55,28 @@
       <!-- Right navbar links -->
       <div class="collapse navbar-collapse justify-content-end" id=" toggleMenu">
 
-            <ul class="nav" style="margin-right: 10px">
-                <form action="/logout" method="POST">
-                    @csrf
-                    <li>
-                <button>Logout</button>
+        <ul class="nav" style="margin-right: 10px">
+          <form action="/logout" method="POST">
+            @csrf
+            <li>
+              <button>Logout</button>
             </li>
-            </form>
+          </form>
 
 
-            </ul>
+        </ul>
 
 
 
-    </div>
+      </div>
     </nav>
     <!-- /.navbar -->
     <!-- Main Sidebar Container -->
     <aside class="main-sidebar sidebar-dark-primary elevation-4">
       <!-- Brand Logo -->
       <a href="/" class="brand-link">
-        <img src="{{ asset('admintemplate/') }}/dist/img/Trinity.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
-          style="opacity: .8">
-        <span class="brand-text font-weight-light">thegoods</span>
+        <img src="{{ asset('assets/img/favicon.ico')}}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+        <span class="brand-text font-weight-light">THEGOODS</span>
       </a>
 
       <!-- Sidebar -->
@@ -100,7 +97,7 @@
             <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
             <li class="nav-item">
-              <a  class="nav-link">
+              <a class="nav-link">
                 <i class="nav-icon fas fas fas fa-cart-arrow-down"></i>
                 <p>
                   List Products
@@ -126,97 +123,97 @@
         <div class="container-fluid">
           <!-- Small boxes (Stat box) -->
           @yield('container')
-         
+
           <section class="content">
             @if ($message = Session::get('done'))
             <div class="alert alert-success alert-block mt-3">
-            <button type="button" class="close" data-dismiss="alert">×</button>
+              <button type="button" class="close" data-dismiss="alert">×</button>
               <strong>{{ $message }}</strong>
-             </div>
+            </div>
             @endif
             <div class="container-fluid">
-                <div class="content-header">
-                    <div class="container-fluid">
-                      <div class="row mb-2">
-                        <div class="col-sm-6">
-                          <h1 class="m-0 text-dark">Dashboard</h1>
-                        </div><!-- /.col -->
-                        <div class="col-sm-6">
-                          <ol class="breadcrumb float-sm-right">
-                            <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item active">Dashboard</li>
-                          </ol>
-                        </div><!-- /.col -->
-                      </div><!-- /.row -->
-                    </div><!-- /.container-fluid -->
-                  </div>
-                <div class="row mb-2">
+              <div class="content-header">
+                <div class="container-fluid">
+                  <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1 class="db-title m-0 text-dark " style="font-size: 25px;font-weight:600;"></h1>
-                    </div>
+                      <h1 class="m-0 text-dark">Dashboard</h1>
+                    </div><!-- /.col -->
+                    <div class="col-sm-6">
+                      <ol class="breadcrumb float-sm-right">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item active">Dashboard</li>
+                      </ol>
+                    </div><!-- /.col -->
+                  </div><!-- /.row -->
+                </div><!-- /.container-fluid -->
+              </div>
+              <div class="row mb-2">
+                <div class="col-sm-6">
+                  <h1 class="db-title m-0 text-dark " style="font-size: 25px;font-weight:600;"></h1>
                 </div>
-                <!-- Small boxes (Stat box) -->
-                <div class="card">
-                    <div class="card-header border-0">
-                      <h3 class="card-title">Stock in Warehouse : {{4000 + $buysepatu + $buysandal + $buylays + $buycocacola
+              </div>
+              <!-- Small boxes (Stat box) -->
+              <div class="card">
+                <div class="card-header border-0">
+                  <h3 class="card-title">Stock in Warehouse : {{4000 + $buysepatu + $buysandal + $buylays + $buycocacola
                       + $buytissue + $buyoil + $buypasta_gigi + $buysabun_piring + $buydeterjen}}</h3>
-                    </div>
-                    <div class="card-body table-responsive p-0">
-                      <table class="table table-striped table-valign-middle">
-                        <thead>
-                          <tr>
-                            <th>Name</th>
-                            <th>Quantity</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td>Sepatu</td>
-                            <td>{{400 + $buysepatu}}</td>
-                          </tr>
-                          <tr>
-                            <td>Sandal</td>
-                            <td>{{400 + $buysandal}}</td>
-                          </tr>
-                          <tr>
-                            <td>Lays</td>
-                            <td>{{400 + $buylays}}</td>
-                          </tr>
-                          <tr>
-                            <td>Cocacola</td>
-                            <td>{{400 + $buycocacola}}</td>
-                          </tr>
-                          <tr>
-                            <td>Tissue</td>
-                            <td>{{400 + $buytissue}}</td>
-                          </tr>
-                          <tr>
-                            <td>Oil</td>
-                            <td>{{400 + $buyoil}}</td>
-                          </tr>
-                          <tr>
-                            <td>Pasta Gigi</td>
-                            <td>{{400 + $buypasta_gigi}}</td>
-                          </tr>
-                          <tr>
-                            <td>Sabun Piring</td>
-                            <td>{{400 + $buysabun_piring}}</td>
-                          </tr>
-                          <tr>
-                            <td>Deterjen</td>
-                            <td>{{400 + $buydeterjen}}</td>
-                          </tr>
-                        </tbody>
-                       
-                      </table>
-                    </div>
-                  </div>
-                <!-- /.row -->
-                <!-- Main row -->
-    
+                </div>
+                <div class="card-body table-responsive p-0">
+                  <table class="table table-striped table-valign-middle">
+                    <thead>
+                      <tr>
+                        <th>Name</th>
+                        <th>Quantity</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Sepatu</td>
+                        <td>{{400 + $buysepatu}}</td>
+                      </tr>
+                      <tr>
+                        <td>Sandal</td>
+                        <td>{{400 + $buysandal}}</td>
+                      </tr>
+                      <tr>
+                        <td>Lays</td>
+                        <td>{{400 + $buylays}}</td>
+                      </tr>
+                      <tr>
+                        <td>Cocacola</td>
+                        <td>{{400 + $buycocacola}}</td>
+                      </tr>
+                      <tr>
+                        <td>Tissue</td>
+                        <td>{{400 + $buytissue}}</td>
+                      </tr>
+                      <tr>
+                        <td>Oil</td>
+                        <td>{{400 + $buyoil}}</td>
+                      </tr>
+                      <tr>
+                        <td>Pasta Gigi</td>
+                        <td>{{400 + $buypasta_gigi}}</td>
+                      </tr>
+                      <tr>
+                        <td>Sabun Piring</td>
+                        <td>{{400 + $buysabun_piring}}</td>
+                      </tr>
+                      <tr>
+                        <td>Deterjen</td>
+                        <td>{{400 + $buydeterjen}}</td>
+                      </tr>
+                    </tbody>
+
+                  </table>
+                </div>
+              </div>
+              <!-- /.row -->
+              <!-- Main row -->
+
             </div>
-          <!-- /.row -->
-          <!-- Main row -->
+            <!-- /.row -->
+            <!-- Main row -->
 
         </div>
         <!-- /.row (main row) -->
@@ -226,7 +223,7 @@
   </div>
   <!-- /.content-wrapper -->
   <footer class="main-footer">
-    <strong>Copyright &copy; 2022 <a href="http://adminlte.io">thegoods</a>.</strong>
+    <strong>Copyright &copy; 2023 <a href="http://adminlte.io">THEGOODS</a>.</strong>
     All rights reserved.
     <div class="float-right d-none d-sm-inline-block">
 
