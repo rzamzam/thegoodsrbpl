@@ -29,11 +29,9 @@
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
-   <!-- Line Chart -->
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"
-   integrity="sha512-QSkVNOCYLtj73J4hbmVoOV6KVZuMluZlioC+trLpewV8qMjsWqlIQvkn1KGX2StWvPMdWGBqim1xlC8krl1EKQ=="
-   crossorigin="anonymous" referrerpolicy="no-referrer"></script>
- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- Line Chart -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js" integrity="sha512-QSkVNOCYLtj73J4hbmVoOV6KVZuMluZlioC+trLpewV8qMjsWqlIQvkn1KGX2StWvPMdWGBqim1xlC8krl1EKQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">
@@ -57,29 +55,28 @@
       <!-- Right navbar links -->
       <div class="collapse navbar-collapse justify-content-end" id=" toggleMenu">
 
-            <ul class="nav" style="margin-right: 10px">
-                <form action="/logout" method="POST">
-                    @csrf
-                    <li>
-                <button>Logout</button>
+        <ul class="nav" style="margin-right: 10px">
+          <form action="/logout" method="POST">
+            @csrf
+            <li>
+              <button>Logout</button>
             </li>
-            </form>
+          </form>
 
 
-            </ul>
+        </ul>
 
 
 
-    </div>
+      </div>
     </nav>
     <!-- /.navbar -->
     <!-- Main Sidebar Container -->
     <aside class="main-sidebar sidebar-dark-primary elevation-4">
       <!-- Brand Logo -->
       <a href="/" class="brand-link">
-        <img src="{{ asset('../assets/img/apple-touch-icon.png') }}" class="brand-image img-circle elevation-3"
-          style="opacity: .8">
-        <span class="brand-text font-weight-light">thegoods</span>
+        <img src="{{ asset('../assets/img/apple-touch-icon.png') }}" class="brand-image img-circle elevation-3" style="opacity: .8">
+        <span class="brand-text font-weight-light">THEGOODS</span>
       </a>
 
       <!-- Sidebar -->
@@ -100,7 +97,7 @@
             <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
             <li class="nav-item">
-              <a  class="nav-link" href="/katalog">
+              <a class="nav-link" href="/katalog">
                 <i class="nav-icon fas fas fas fa-cart-arrow-down"></i>
                 <p>
                   Add Products
@@ -109,7 +106,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a  class="nav-link">
+              <a class="nav-link">
                 <i class="nav-icon fas fas fas fa-cart-arrow-down"></i>
                 <p>
                   List Products
@@ -139,93 +136,93 @@
           <section class="content">
             @if ($message = Session::get('done'))
             <div class="alert alert-success alert-block mt-3">
-            <button type="button" class="close" data-dismiss="alert">×</button>
+              <button type="button" class="close" data-dismiss="alert">×</button>
               <strong>{{ $message }}</strong>
-             </div>
+            </div>
             @endif
             <div class="container-fluid">
-                <div class="content-header">
-                    <div class="container-fluid">
-                      <div class="row mb-2">
-                        <div class="col-sm-6">
-                          <h1 class="m-0 text-dark">Dashboard</h1>
-                        </div><!-- /.col -->
-                        <div class="col-sm-6">
-                          <ol class="breadcrumb float-sm-right">
-                            <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item active">Dashboard</li>
-                          </ol>
-                        </div><!-- /.col -->
-                      </div><!-- /.row -->
-                    </div><!-- /.container-fluid -->
-                  </div>
-                <div class="row mb-2">
+              <div class="content-header">
+                <div class="container-fluid">
+                  <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1 class="db-title m-0 text-dark " style="font-size: 25px;font-weight:600;"></h1>
-                    </div>
+                      <h1 class="m-0 text-dark">Dashboard</h1>
+                    </div><!-- /.col -->
+                    <div class="col-sm-6">
+                      <ol class="breadcrumb float-sm-right">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item active">Dashboard</li>
+                      </ol>
+                    </div><!-- /.col -->
+                  </div><!-- /.row -->
+                </div><!-- /.container-fluid -->
+              </div>
+              <div class="row mb-2">
+                <div class="col-sm-6">
+                  <h1 class="db-title m-0 text-dark " style="font-size: 25px;font-weight:600;"></h1>
                 </div>
-                <!-- Small boxes (Stat box) -->
-                <div class="card">
-                    <div class="card-header border-0">
-                      <h3 class="card-title">Stock in Warehouse : {{4000 - $sepatu - $sandal - $lays - $cocacola - $tissue - $oil - $gula - $pasta_gigi - $sabun_piring - $deterjen +
+              </div>
+              <!-- Small boxes (Stat box) -->
+              <div class="card">
+                <div class="card-header border-0">
+                  <h3 class="card-title">Stock in Warehouse : {{4000 - $sepatu - $sandal - $lays - $cocacola - $tissue - $oil - $gula - $pasta_gigi - $sabun_piring - $deterjen +
                       $buysepatu + $buysandal + $buylays + $buycocacola + $buytissue + $buyoil + $buypasta_gigi + $buysabun_piring + $buydeterjen}}</h3>
-                    </div>
-                    <div class="card-body table-responsive p-0">
-                      <table class="table table-striped table-valign-middle">
-                        <thead>
-                          <tr>
-                            <th>Name</th>
-                            <th>Quantity</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td>Sepatu</td>
-                            <td>{{400 - $sepatu + $buysepatu}}</td>
-                          </tr>
-                          <tr>
-                            <td>Sandal</td>
-                            <td>{{400 - $sandal +  $buysandal}}</td>
-                          </tr>
-                          <tr>
-                            <td>Lays</td>
-                            <td>{{400 - $lays + $buylays}}</td>
-                          </tr>
-                          <tr>
-                            <td>Cocacola</td>
-                            <td>{{400 - $cocacola + $buycocacola}}</td>
-                          </tr>
-                          <tr>
-                            <td>Tissue</td>
-                            <td>{{400 - $tissue + $buytissue}}</td>
-                          </tr>
-                          <tr>
-                            <td>Oil</td>
-                            <td>{{400 - $oil + $buyoil}}</td>
-                          </tr>
-                          <tr>
-                            <td>Pasta Gigi</td>
-                            <td>{{400 - $pasta_gigi + $buypasta_gigi}}</td>
-                          </tr>
-                          <tr>
-                            <td>Sabun Piring</td>
-                            <td>{{400 - $sabun_piring + $buysabun_piring}}</td>
-                          </tr>
-                          <tr>
-                            <td>Deterjen</td>
-                            <td>{{400 - $deterjen + $buydeterjen}}</td>
-                          </tr>
-                        </tbody>
+                </div>
+                <div class="card-body table-responsive p-0">
+                  <table class="table table-striped table-valign-middle">
+                    <thead>
+                      <tr>
+                        <th>Name</th>
+                        <th>Quantity</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Sepatu</td>
+                        <td>{{400 - $sepatu + $buysepatu}}</td>
+                      </tr>
+                      <tr>
+                        <td>Sandal</td>
+                        <td>{{400 - $sandal +  $buysandal}}</td>
+                      </tr>
+                      <tr>
+                        <td>Lays</td>
+                        <td>{{400 - $lays + $buylays}}</td>
+                      </tr>
+                      <tr>
+                        <td>Cocacola</td>
+                        <td>{{400 - $cocacola + $buycocacola}}</td>
+                      </tr>
+                      <tr>
+                        <td>Tissue</td>
+                        <td>{{400 - $tissue + $buytissue}}</td>
+                      </tr>
+                      <tr>
+                        <td>Oil</td>
+                        <td>{{400 - $oil + $buyoil}}</td>
+                      </tr>
+                      <tr>
+                        <td>Pasta Gigi</td>
+                        <td>{{400 - $pasta_gigi + $buypasta_gigi}}</td>
+                      </tr>
+                      <tr>
+                        <td>Sabun Piring</td>
+                        <td>{{400 - $sabun_piring + $buysabun_piring}}</td>
+                      </tr>
+                      <tr>
+                        <td>Deterjen</td>
+                        <td>{{400 - $deterjen + $buydeterjen}}</td>
+                      </tr>
+                    </tbody>
 
-                      </table>
-                    </div>
-                  </div>
-                <!-- /.row -->
-                <!-- Main row -->
-                <div id="curve_chart" style="width: 900px; height: 500px"></div>
+                  </table>
+                </div>
+              </div>
+              <!-- /.row -->
+              <!-- Main row -->
+              <div id="curve_chart" style="width: 900px; height: 500px"></div>
             </div>
-          <!-- /.row -->
-          <!-- Main row -->
+            <!-- /.row -->
+            <!-- Main row -->
 
         </div>
         <!-- /.row (main row) -->
@@ -288,38 +285,90 @@
   <!-- AdminLTE for demo purposes -->
   <script src="{{ asset('admintemplate/') }}/dist/js/demo.js"></script>
   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-      <script type="text/javascript">
-        google.charts.load('current', {'packages':['corechart']});
-        google.charts.setOnLoadCallback(drawChart);
+  <script type="text/javascript">
+    google.charts.load('current', {
+      'packages': ['corechart']
+    });
+    google.charts.setOnLoadCallback(drawChart);
 
-        function drawChart() {
-          var data = google.visualization.arrayToDataTable([
-            ['Month', 'Sales' ],
-            ['Jan',  {{$january}}],
-            ['Feb',   {{$february}}     ],
-            ['Mar',   {{$march}}       ],
-            ['Apr',   {{$april}}      ],
-            ['May',   {{$may}}      ],
-            ['Jun',   {{$june}}      ],
-            ['Jul',   {{$july}}      ],
-            ['Aug',   {{$august}}      ],
-            ['Sep',   {{$september}}      ],
-            ['Oct',   {{$october}}      ],
-            ['Nov',   {{$november}}      ],
-            ['Dec',   {{$december}}      ],
-          ]);
+    function drawChart() {
+      var data = google.visualization.arrayToDataTable([
+        ['Month', 'Sales'],
+        ['Jan', {
+          {
+            $january
+          }
+        }],
+        ['Feb', {
+          {
+            $february
+          }
+        }],
+        ['Mar', {
+          {
+            $march
+          }
+        }],
+        ['Apr', {
+          {
+            $april
+          }
+        }],
+        ['May', {
+          {
+            $may
+          }
+        }],
+        ['Jun', {
+          {
+            $june
+          }
+        }],
+        ['Jul', {
+          {
+            $july
+          }
+        }],
+        ['Aug', {
+          {
+            $august
+          }
+        }],
+        ['Sep', {
+          {
+            $september
+          }
+        }],
+        ['Oct', {
+          {
+            $october
+          }
+        }],
+        ['Nov', {
+          {
+            $november
+          }
+        }],
+        ['Dec', {
+          {
+            $december
+          }
+        }],
+      ]);
 
-          var options = {
-            title: 'Sales Performance',
-            curveType: 'function',
-            legend: { position: 'bottom' }
-          };
-
-          var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
-
-          chart.draw(data, options);
+      var options = {
+        title: 'Sales Performance',
+        curveType: 'function',
+        legend: {
+          position: 'bottom'
         }
-      </script>
+      };
+
+      var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+      chart.draw(data, options);
+    }
+  </script>
 </body>
 
 </html>
