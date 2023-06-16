@@ -34,6 +34,6 @@ class PurchaseSupplierController extends Controller
     public function viewInvoice($id)
     {
         $purchases = PurchaseSupplier::where('purchaseSupplier_id', '=', $id)->first();
-        return view('invoice_pdf', compact('purchases'));
+        return view('invoice_owner', compact('purchases'));
     }
 }

@@ -105,6 +105,15 @@
                 </p>
               </a>
             </li>
+          <li class="nav-item">
+              <a class="nav-link" href="/history_owner">
+                <i class="nav-icon fas fas fas fa-cart-arrow-down"></i>
+                <p>
+                  View Purchase History
+                  {{-- <i class="right fas fa-angle-left"></i> --}}
+                </p>
+              </a>
+            </li>
             <li class="nav-item">
               <a class="nav-link">
                 <i class="nav-icon fas fas fas fa-cart-arrow-down"></i>
