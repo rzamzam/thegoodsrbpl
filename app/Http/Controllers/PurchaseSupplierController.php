@@ -24,7 +24,7 @@ class PurchaseSupplierController extends Controller
             'user_id' => auth()->user()->user_id,
             'totalprice' => $request->totalPriceInt,
         ]);
-        return redirect('/owner');
+        return redirect('/pembayaran');
     }
     public function viewHistory()
     {
