@@ -1,7 +1,7 @@
 @extends('layouts.layout')
 @section('isi')
 
-<div class="container">
+<div class="container">\
     @if(auth()->user()->role_id == '1')
     <form method="POST" action="buyer/purchase">
         @elseif (auth()->user()->role_id == '2')
@@ -310,7 +310,7 @@
             </div>
         </div>
     </div>
-    @if (auth()->user()->role_id === 1)
+    @if (auth()->user()->role_id === '1')
     <div class="row mt-5">
         <div class="col-2"></div>
         <div class="col-8">
